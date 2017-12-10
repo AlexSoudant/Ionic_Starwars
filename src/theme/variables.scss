@@ -39,7 +39,12 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222
-);
+  );
+
+  $SWBlack:rgb(31, 31, 31);
+  $SWGrey:rgb(63, 63, 63);
+  $SWYellow:#e2d002;
+  
 
 
 // App iOS Variables
@@ -69,6 +74,20 @@ $colors: (
 // then be future customized. This import comes last
 // so that the above variables are used and Ionic's
 // default are overridden.
+
+$background-color: $SWBlack;
+$toolbar-background: $SWGrey;
+$toolbar-md-text-color:$SWYellow;
+$toolbar-ios-text-color:$SWYellow;
+$toolbar-md-button-color:$SWYellow;
+$toolbar-ios-button-color:$SWYellow;
+$toolbar-md-border-color	:$SWYellow;
+$toolbar-ios-border-color	:$SWYellow;
+$button-md-border-color:$SWYellow;
+$button-ios-border-color:$SWYellow;
+$button-md-border-style:solid;
+$button-ios-border-style:solid;
+
 
 @import "ionic.theme.default";
 

@@ -1,5 +1,8 @@
+import { IonicPage/* , NavController, NavParams */ } from 'ionic-angular';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { NewsProvider } from './../../providers/news/news';
+import { Observable } from 'rxjs/Observable';
+import { News } from '../../interfaces/news.interface';
 
 /**
  * Generated class for the ActualityPage page.
@@ -15,8 +18,14 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ActualityPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  allNews: Observable<News[]>;
+
+  constructor(public newsProvider: NewsProvider) {
+
+    this.allNews = newsProvider.getAll();
+
   }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ActualityPage');
