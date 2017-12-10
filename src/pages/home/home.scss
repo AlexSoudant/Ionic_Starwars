@@ -248,6 +248,7 @@ page-home {
     }
 
   @media screen and (min-width:769px) {
+
     font-size : 40px;
       h1 {
         font-size : 60px;
@@ -278,6 +279,10 @@ page-home {
 
       .button-inner{
           font-size : 25px;
+      }
+
+      button.item.item-block.item-ios{
+        font-size: 2rem;
       }
     }
   

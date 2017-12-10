@@ -107,6 +107,18 @@ page-society {
 		color: black;
 	}
 
+	.card-ios h3{
+		color: #e15021;
+		text-align: center;
+		text-decoration: underline;
+	}
+
+	.card-md h3{
+		color: #e15021;
+		text-align: center;
+		text-decoration: underline;
+	}
+
 	.card-content-md {
 		background-color: #222;
 	}
@@ -207,14 +219,18 @@ page-society {
 		.button-inner{
 				font-size : 25px;
 		}
+
+		.card-ios h3{
+			font-size : 30px;
+		}
+	
+		.card-md h3{
+			font-size : 30px;
+		}
+	
 		
 	}
 
-h3{
-	color: black;
-	text-align: center;
-	text-decoration: underline;
-}
 
 #submitContact{
 	background-color: grey;
