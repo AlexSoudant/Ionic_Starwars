@@ -107,11 +107,31 @@ page-society {
 		color: black;
 	}
 
+	.card-content-md {
+		background-color: #222;
+	}
+
+	.card-content-ios {
+		background-color: #222;
+	}
+
+	.card-title-md {
+		color: #ebd800;
+	}
+	.card-title-ios {
+		color: #ebd800;
+	}
+
+	.card-md p {
+		color: #ddd;
+	}
+	
+	.card-ios p {
+		color: #ddd;
+	}
+	
 	@media screen and (min-width:359px) {
-		font-size : 16px;
-			h1 {
-				font-size : 18px;
-			}
+
 			.society {
 				margin-top: 5px;
 			}
@@ -126,10 +146,7 @@ page-society {
 		}
 
 	@media screen and (min-width:374px) {
-		font-size : 18px;
-			h1 {
-				font-size : 22px;
-			}
+
 			.society {
 				margin-top: 5px;
 			}
@@ -147,10 +164,22 @@ page-society {
 		}
 
 	@media screen and (min-width:769px) {
-		font-size : 40px;
-		h1 {
-			font-size : 60px;
+
+
+		.card-title-md {
+			font-size: 60px;
 		}
+		.card-title-ios {
+			font-size: 60px;
+		}
+
+		.card-md p {
+			font-size: 30px;
+		}
+		.card-ios p {
+			font-size: 30px;
+		}
+
 		.bar-button-menutoggle-ios ion-icon {
 			font-size: 300%;
 			color: #ebd800;
