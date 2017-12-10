@@ -1,18 +1,101 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Home</ion-title>
+    <ion-grid>
+
+      <ion-row> 
+        <ion-col>
+            <button ion-button class="menu" menuToggle>
+                <ion-icon name="menu"></ion-icon>
+            </button>
+        </ion-col>
+
+        <ion-col>
+          <img class="society" src="assets/imgs/TITREblanc.png">
+        </ion-col>
+
+        <ion-col class="joinButton">
+          <button ion-button class="joinAssociation" >
+              Want to join us ?
+          </button>
+        </ion-col>
+
+      </ion-row>
+      
+      
+
+    </ion-grid>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    TATATATATAT, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <ion-grid class="grid-poster">
+    <ion-row>
+      <ion-col>
+        <img class="poster" src="assets/imgs/last_jedi_poster.jpeg">
+      </ion-col>
+    </ion-row>
+   </ion-grid>  
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-grid class="grid-header">
+    <ion-row>
+      <ion-col>
+          <img class="logo" src="assets/imgs/last_jedi_logo.png">
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <section class="infoFilm">
+            <p> More than 5 million of theather views are expected. </p>
+            <p> Two Award nominations.    </p>
+            <p> if The Last Jedi rise at the level of The Force Awakens it will raise $248 million on opening and $2 billion worldwide!</p>
+        </section>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid class="grid-footer">
+    <ion-row>
+      <ion-col>
+        <section>
+            <h1>Did you knew it?</h1>
+            <p> The actor who played Obi-Wan Kenobi, Alec Guiness, thought of the Star Wars films as "fairy-tale rubbish". </p>
+        </section>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <section>
+            <h1>News from the StarWars Family</h1>
+            <p>Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
+        </section>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <section>
+            <h1>News from the StarWars Family</h1>
+            <p>Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
+        </section>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <section>
+            <h1>Words from StarWars Fans</h1>
+            <p>"Joining a Starwars FanClub was a turning point in my life..." Jason McByrnes</p>
+        </section>
+      </ion-col>
+    </ion-row>
+
+  </ion-grid>
+
+
+
+
+  
 </ion-content>
