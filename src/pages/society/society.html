@@ -5,30 +5,114 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+	<ion-navbar>
+		<ion-grid>
 
-  <ion-navbar>
-			<button ion-button menuToggle>
-					<ion-icon name="menu"></ion-icon>
-				</button>
-    <ion-title>society</ion-title>
-  </ion-navbar>
 
+			<ion-row>
+				<ion-col>
+					<button ion-button class="menu" menuToggle>
+						<ion-icon name="menu"></ion-icon>
+					</button>
+				</ion-col>
+
+				<ion-col>
+					<img class="society" src="assets/imgs/TITREblanc.png">
+				</ion-col>
+
+				<ion-col class="joinButton">
+					<button ion-button class="joinAssociation">
+						Want to join us ?
+					</button>
+				</ion-col>
+
+			</ion-row>
+
+		</ion-grid>
+	</ion-navbar>
 </ion-header>
 
 
-<ion-content no-padding  class="master">
 
-<!-- Version card -->
+<ion-content no-padding class="master">
+
+	<!-- Version card -->
 
 	<ion-card>
-		<img src="assets/imgs/icon.png"/>
-		<ion-card-content >
-	    <ion-card-title text-center>
-	      Star Wars Family
-	    </ion-card-title>
-		<p text-center>
-			La Star Wars Family est un club de fans consacré à la création et au port de répliques fidèles d'armures des troupes d'assaut impériales et d'uniformes impériaux de l'univers de Star Wars. Créé par Albin Johnson et Tom Crews en 1997, le groupe affichait 4 000 membres en 2008, faisant de lui le plus grand groupe costumé de fans de l'univers de Star Wars (record officialisé par le Guiness Book 20081). Les membres de la 501e se produisent souvent lors de conventions de science-fiction et de manifestations de charité, parfois à la demande du service des relations avec les fans de Lucasfilm.
-	    </p> 
+		<img src="assets/imgs/icon.png" />
+		<ion-card-content>
+			<ion-card-title text-center>
+				Star Wars Family
+			</ion-card-title>
+			<div>
+				<h3>Who we are ?</h3>
+				<hr>
+				<p text-center>
+					The Star Wars Family is fans' club dedicated to the creation and to the port of faithful retorts of armors of the imperial
+					storm troops and the imperial uniforms of star Wars's universe. Created by Albin Johnson and Tom Crews in 1997, the
+					group showed 4 000 members in 2008, making of him the biggest group dressed up of fans of star Wars's universe (record
+					officialized by Guiness Book 20081). The members of the 501th occur often during conventions of science fiction and
+					demonstrations of charity, sometimes at the request of the service of the relations with the fans of Lucasfilm.
+				</p>
+			</div>
+			<hr>
+			<div>
+				<h3>Why you'll join us !</h3>
+				<hr>
+				<p text-center>
+					The Star Wars Family is fans' club dedicated to the creation and to the port of faithful retorts of armors of the imperial
+					storm troops and the imperial uniforms of star Wars's universe. Created by Albin Johnson and Tom Crews in 1997, the
+					group showed 4 000 members in 2008, making of him the biggest group dressed up of fans of star Wars's universe (record
+					officialized by Guiness Book 20081). The members of the 501th occur often during conventions of science fiction and
+					demonstrations of charity, sometimes at the request of the service of the relations with the fans of Lucasfilm.
+				</p>
+			</div>
+			<hr>
+			<div>
+				<h3>Contact us:</h3>
+				<hr>
+				<p text-center>
+					Star Wars Family
+				</p>
+				<p text-center>
+					325 route de lorient
+				</p>
+				<p text-center>
+					35000 Rennes
+				</p>
+				<p text-center>
+					FRANCE
+				</p>
+				<p text-center>
+					02-99-00-88-88
+				</p>
+				<p text-center>
+					contact@StarWarsFamily.fr
+				</p>
+
+				<hr>
+
+				<h3>Or direct message here...</h3>
+
+				<ion-list padding>
+					<ion-item>
+						<ion-textarea placeholder="Enter your name"></ion-textarea>
+					</ion-item>
+					<ion-item>
+						<ion-textarea placeholder="Enter your firstname"></ion-textarea>
+					</ion-item>
+					<ion-item>
+						<ion-textarea placeholder="Enter your email"></ion-textarea>
+					</ion-item>
+					<ion-item>
+						<ion-textarea placeholder="Enter your message"></ion-textarea>
+					</ion-item>
+					<ion-item>
+						<button ion-button block id="submitContact">Send</button>
+					</ion-item>
+				</ion-list>
+			</div>
+			<hr>
 		</ion-card-content>
 	</ion-card>
 </ion-content>

@@ -22,4 +22,9 @@ export class SocietyPage {
     console.log('ionViewDidLoad SocietyPage');
   }
 
+  errorMessage = "Error message!"
+    formSettings = {
+        theme: 'ios'
+    };
+
 }

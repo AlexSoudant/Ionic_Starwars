@@ -1,15 +1,240 @@
 page-society {
 
-.master{
-	background-color: black;
-	color: white;
+	.toolbar-md {
+    padding: 0 0 0 0;
+    background-color: #222;
+  }
+
+  .bar-button-default-md{
+    color: #ebd800;
+  }
+
+  .toolbar-ios {
+    padding: 0 0 0 0;
+    background-color: #222;
+  }
+
+  ion-header{
+    height: 8%;
+    // color: white;
+    background-color: #222;
+
+    ion-navbar{
+      height: 100%;
+      background-color: #222;
+      
+
+      div {
+        height: 100%;
+        background: #222;
+
+        // General
+        ion-grid.grid, ion-row.row{
+          height: 100%;
+          margin: 1 auto;
+          padding: 0;
+        }
+
+        ion-col.col{
+          height: 100%;
+          margin: 1 auto;
+        }
+
+        .joinButton{
+          height: 100%;
+          width: 80%;
+          margin: 1 auto;
+         
+
+        } 
+
+        .button-ios {
+          height: 80%;
+          width: 80%;
+          margin: 1 auto;
+          color: #ebd800;
+          background-color: #222;
+          border: thin solid #ddd;
+        }
+
+        .button-md {
+          height: 80%;
+          width: 80%;
+          margin: 1 auto;
+          color: #ebd800;
+          background-color: #222;
+          border: thin solid #ddd;
+        }
+
+
+        .bar-button-menutoggle-ios ion-icon {
+          // font-size: 200%;
+          color: #ebd800;
+        }
+        .menu{
+          height: 100%;
+          // width: 100%;
+
+        }
+
+        .society{
+          height: 80%;
+          
+        }
+
+        .button-md {
+          display: block;
+          height: 90%;
+          width: 90%;
+          margin: 1 auto;
+        }
+
+      }
+    }
+  }
+  ion-header.content.content-ios {
+    background-color: #151515;
+    color: #fff;
+	}
+	
+	.master{
+		background-color: black;
+		color: white;
+	}
+
+	.master2{
+		background-color: white;
+		color: black;
+	}
+
+	.card-ios h3{
+		color: #e15021;
+		text-align: center;
+		text-decoration: underline;
+	}
+
+	.card-md h3{
+		color: #e15021;
+		text-align: center;
+		text-decoration: underline;
+	}
+
+	.card-content-md {
+		background-color: #222;
+	}
+
+	.card-content-ios {
+		background-color: #222;
+	}
+
+	.card-title-md {
+		color: #ebd800;
+	}
+	.card-title-ios {
+		color: #ebd800;
+	}
+
+	.card-md p {
+		color: #ddd;
+	}
+	
+	.card-ios p {
+		color: #ddd;
+	}
+	
+	@media screen and (min-width:359px) {
+
+			.society {
+				margin-top: 5px;
+			}
+			.button-ios {
+				margin-top: 5px;
+				margin-left: 30px;
+			}
+			.button-md {
+				margin-top: 5px;
+				margin-left: 20px;
+			}
+		}
+
+	@media screen and (min-width:374px) {
+
+			.society {
+				margin-top: 5px;
+			}
+
+			.button-ios {
+				margin-top: 5px;
+				margin-left: 30px;
+			}
+
+			.button-md {
+				margin-top: 5px;
+				margin-left: 20px;
+			}
+
+		}
+
+	@media screen and (min-width:769px) {
+
+
+		.card-title-md {
+			font-size: 60px;
+		}
+		.card-title-ios {
+			font-size: 60px;
+		}
+
+		.card-md p {
+			font-size: 30px;
+		}
+		.card-ios p {
+			font-size: 30px;
+		}
+
+		.bar-button-menutoggle-ios ion-icon {
+			font-size: 300%;
+			color: #ebd800;
+		}
+
+		.bar-button-menutoggle-md ion-icon {
+			font-size: 300%;
+			color: #ebd800;
+		}
+
+		.button-ios {
+			margin-top: 10px;
+			margin-left: 40px;
+		}
+
+		.button-md {
+			margin-top: 10px;
+			margin-left: 30px;
+		}
+
+		.society {
+			margin-top: 10px;
+		}
+
+		.button-inner{
+				font-size : 25px;
+		}
+
+		.card-ios h3{
+			font-size : 30px;
+		}
+	
+		.card-md h3{
+			font-size : 30px;
+		}
+	
+		
+	}
+
+
+#submitContact{
+	background-color: grey;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
 }
-
-.master2{
-	background-color: white;
-	color: black;
-}
-
-
-
 }
