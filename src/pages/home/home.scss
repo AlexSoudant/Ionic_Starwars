@@ -7,16 +7,28 @@ page-home {
     height: 100%;
     font-size: 100%;
   }
+  .toolbar-md {
+    padding: 0 0 0 0;
+    background-color: #222;
+  }
+
+  .bar-button-default-md{
+    color: #ebd800;
+  }
 
   .toolbar-ios {
     padding: 0 0 0 0;
+    background-color: #222;
   }
+
   ion-header{
     height: 8%;
-    color: white;
+    // color: white;
+    background-color: #222;
 
     ion-navbar{
       height: 100%;
+      background-color: #222;
       
 
       div {
@@ -44,6 +56,15 @@ page-home {
         } 
 
         .button-ios {
+          height: 80%;
+          width: 80%;
+          margin: 1 auto;
+          color: #ebd800;
+          background-color: #222;
+          border: thin solid #ddd;
+        }
+
+        .button-md {
           height: 80%;
           width: 80%;
           margin: 1 auto;
@@ -83,23 +104,21 @@ page-home {
     color: #fff;
   }
 
-  ion-content.content.content-ios {
+  ion-content.content.content-md {
     background-color: #151515;
     color: #ebd800;
   }
 
+  ion-content.content-ios{
+    color: #ebd800;
+    background-color: #151515;
+  }
+
   ion-content {
-
-
 
     height: 100%;
     background-color: #151515;
     color: #ebd800;
-
-    .content-ios{
-      color: #ebd800;
-      background-color: #151515;
-    }
 
     .fixed-content{
       margin-top: 15%;
@@ -107,7 +126,6 @@ page-home {
 
     .scroll-content{
       margin-top: 15%;
-
 
       ion-grid.grid-poster, ion-row.row{
         height: 100%;
@@ -137,14 +155,17 @@ page-home {
           height: 100%;
         }
   
-        section {
+        .infoFilm {
           height: 100%;
           margin: 1 auto;
+          
 
           p {
             margin-bottom: 15%;
             //font-size: 100%;
             text-align: center;
+            color: #e15021;
+
           }
 
         }
@@ -173,6 +194,7 @@ page-home {
           p {
             
             //font-size: 1em;
+            color: #ddd;
             text-align: center;
           }
         }
@@ -198,6 +220,10 @@ page-home {
         margin-top: 5px;
         margin-left: 30px;
       }
+      .button-md {
+        margin-top: 5px;
+        margin-left: 20px;
+      }
     }
 
   @media screen and (min-width:374px) {
@@ -214,6 +240,11 @@ page-home {
         margin-left: 30px;
       }
 
+      .button-md {
+        margin-top: 5px;
+        margin-left: 20px;
+      }
+
     }
 
   @media screen and (min-width:769px) {
@@ -226,10 +257,21 @@ page-home {
         color: #ebd800;
       }
 
+      .bar-button-menutoggle-md ion-icon {
+        font-size: 300%;
+        color: #ebd800;
+      }
+
       .button-ios {
         margin-top: 10px;
         margin-left: 40px;
       }
+
+      .button-md {
+        margin-top: 10px;
+        margin-left: 30px;
+      }
+
       .society {
         margin-top: 10px;
       }
