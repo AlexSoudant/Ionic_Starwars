@@ -7,6 +7,9 @@
 <ion-header>
 
   <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
     <ion-title>actuality</ion-title>
   </ion-navbar>
 
@@ -14,5 +17,17 @@
 
 
 <ion-content padding>
+
+  <ion-list>
+    <ion-spinner *ngIf="!(allNews | async)"></ion-spinner>
+    <ion-card *ngFor="let news of allNews | async">
+      <ion-card-header>
+        {{news.title}}
+      </ion-card-header>
+      <ion-card-content>
+        <p>{{news.txt}}</p>
+      </ion-card-content>
+    </ion-card>
+  </ion-list>
 
 </ion-content>

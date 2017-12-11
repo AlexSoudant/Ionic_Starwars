@@ -39,7 +39,12 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222
-);
+  );
+
+  $SWBlack:rgb(31, 31, 31);
+  $SWGrey:rgb(63, 63, 63);
+  $SWYellow:#e2d002;
+  
 
 
 // App iOS Variables
@@ -70,7 +75,50 @@ $colors: (
 // so that the above variables are used and Ionic's
 // default are overridden.
 
+
+
+
+
+
+$background-color: $SWBlack;
+$toolbar-background: $SWGrey;
+$toolbar-md-text-color:$SWYellow;
+$toolbar-ios-text-color:$SWYellow;
+// $toolbar-md-button-color:$SWYellow;
+// $toolbar-ios-button-color:$SWYellow;
+// $toolbar-md-border-color	:$SWYellow;
+// $toolbar-ios-border-color	:$SWYellow;
+// $button-md-border-color:$SWYellow;
+// $button-ios-border-color:$SWYellow;
+// $button-md-border-style:solid;
+// $button-ios-border-style:solid;
+$menu-md-background:$SWGrey;
+$menu-ios-background:$SWGrey;
+$label-md-text-color:$SWYellow;
+$label-ios-text-color:$SWYellow;
+
+$card-ios-background-color:$SWGrey;
+$card-md-background-color:$SWGrey;
+$card-ios-header-color:$SWYellow;
+$card-md-header-color:$SWYellow;
+$card-md-text-color:#f4f4f4;
+$card-ios-text-color:#f4f4f4;
+
+$item-md-body-text-color:#f4f4f4;
+$item-ios-body-text-color:#f4f4f4;
+
 @import "ionic.theme.default";
+
+
+#logo-navbar{
+  height: 30px;
+}
+
+#join-button{
+  border: solid 2px;
+  border-color: $SWYellow;
+  color:$SWYellow;
+}
 
 
 // Ionicons
