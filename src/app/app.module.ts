@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -17,6 +19,11 @@ import { MoviePage } from '../pages/movie/movie';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NewsProvider } from '../providers/news/news';
+import { SwapiService } from 'ng2-swapi';
+import { SwapiProvider } from '../providers/swapi/swapi';
+import { FactsProvider } from '../providers/facts/facts';
+import { WordsProvider } from '../providers/words/words';
+
 
 @NgModule({
   declarations: [
@@ -32,6 +39,7 @@ import { NewsProvider } from '../providers/news/news';
     AngularFireModule.initializeApp(config.firebase),
     AngularFirestoreModule.enablePersistence(),
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -46,7 +54,11 @@ import { NewsProvider } from '../providers/news/news';
     StatusBar,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    NewsProvider
+    NewsProvider,
+    SwapiService,
+    SwapiProvider,
+    FactsProvider,
+    WordsProvider
   ]
 })
 export class AppModule { }

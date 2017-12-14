@@ -103,6 +103,8 @@ $card-ios-header-color:$SWYellow;
 $card-md-header-color:$SWYellow;
 $card-md-text-color:#f4f4f4;
 $card-ios-text-color:#f4f4f4;
+$card-ios-title-text-color:$SWYellow;
+$card-md-title-text-color:$SWYellow;
 
 $item-md-body-text-color:#f4f4f4;
 $item-ios-body-text-color:#f4f4f4;
@@ -113,15 +115,6 @@ $card-md-box-shadow-color: rgba(167, 167, 14, 0.322);
 @import "ionic.theme.default";
 
 
-#logo-navbar{
-  height: 30px;
-}
-
-#join-button{
-  border: solid 2px;
-  border-color: $SWYellow;
-  color:$SWYellow;
-}
 
 
 
