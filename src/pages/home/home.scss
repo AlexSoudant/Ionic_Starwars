@@ -8,6 +8,15 @@ page-home {
     @include font-size-map($title-font-size);
   }
 
+  ion-navbar {
+    @include navbar-height-map($navbar-ios-height);
+  }
+
+  // ion-content {
+  //   @include padding-top-map($padding-top); 
+  // }
+  
+
   // ion-content.content.content-md {
   //   background-color: #151515;
   //   color: #ebd800;

@@ -44,11 +44,6 @@ $colors: (
   $SWBlack:rgba(31, 31, 31, 0);
   $SWGrey:rgba(63, 63, 63,0.5);
   $SWYellow:#e2d002;
-<<<<<<< HEAD
-  $SWOrange:#e15021
-
-;
-=======
   $SWOrange:#e15021;
 
   @mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
@@ -63,7 +58,6 @@ $colors: (
         }
     }
   }
->>>>>>> 94b7e347db2bd9476bfc50bfaaa8c6d9153ade11
   
   // breakpoint variables
   $lg: 1023px;
@@ -88,6 +82,23 @@ $colors: (
   }
   $title-font-size: (null: 60px, $lg: 40px, $md: 24px, $sm: 18px, $xs: 16px);
   $paragraph-font-size: (null: 40px, $lg: 40px, $md: 18px, $sm: 16px, $xs: 14px);
+
+
+  $navbar-ios-height:(null: 120px, $lg: 80px, $md: 60px, $sm: 60px, $xs: 40px);
+  $navbar-md-height:(null: 120px, $lg: 80px, $md: 60px, $sm: 60px, $xs: 40px);
+
+  @mixin navbar-height-map($navbar-height-map) {
+    @each $breakpoint, $nav-bar-height in $navbar-height-map {
+        @if $breakpoint == null {
+            height: $nav-bar-height;
+        } @else {
+            @include breakpoint($breakpoint) {
+              height: $nav-bar-height;
+            }
+        }
+    }
+  }
+
 
 // App iOS Variables
 // --------------------------------------------------
