@@ -37,7 +37,7 @@ export class CineProche {
       }
     };
 
-    this.map = GoogleMaps.create('map_canvas', mapOptions);
+    this.map = GoogleMaps.create(document.getElementById('map_canvas'), mapOptions);
     this.map.addEventListener(GoogleMapsEvent.MAP_READY).subscribe(() => {
 
       // Wait the MAP_READY before using any methods.
