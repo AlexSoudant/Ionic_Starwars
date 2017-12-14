@@ -16,11 +16,11 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col> 
+      <ion-col>
         <img class="poster" width="100%" height="auto" object-fit: cover center src="assets/imgs/last_jedi_poster.jpeg">
       </ion-col>
-    </ion-row> 
-  </ion-grid> 
+    </ion-row>
+  </ion-grid>
 
   <ion-grid class="grid-header">
     <ion-row>
@@ -42,22 +42,28 @@
 
   </ion-grid>
 
-  
+
   <ion-grid class="grid-footer">
     <ion-row>
       <ion-col>
         <section>
           <h1 text-center class="home_h1">Did you knew it?</h1>
-          <p text-center class="home_p"> The actor who played Obi-Wan Kenobi, Alec Guiness, thought of the Star Wars films as "fairy-tale rubbish". </p>
+          <!--<ion-spinner *ngIf="!(randomFacts | async)"></ion-spinner>-->
+          <!-- <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p> -->
+          <ion-card>
+            <ion-card-content>
+              <p class="home_p" text-center>{{randomFacts.text}}</p>
+            </ion-card-content>
+          </ion-card>
         </section>
       </ion-col>
     </ion-row>
-    
+
     <ion-row>
       <ion-col>
         <section>
           <h1 text-center class="home_h1">News from the StarWars Family</h1>
-          <p text-center class="home_p" >Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
+          <p text-center class="home_p">Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
         </section>
       </ion-col>
     </ion-row>
@@ -66,7 +72,14 @@
       <ion-col>
         <section>
           <h1 text-center class="home_h1">Words from StarWars Fans</h1>
-          <p text-center class="home_p">"Joining a Starwars FanClub was a turning point in my life..." Jason McByrnes</p>
+          <ion-spinner *ngIf="!(allWords | async)"></ion-spinner>
+          <!-- <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p> -->
+          <ion-card *ngFor="let words of allWords | async">
+            <ion-card-content>
+              <p class="home_p" text-center>{{words.text}}</p>
+              <p class="home_name" text-center>{{words.name}}</p>
+            </ion-card-content>
+          </ion-card>
         </section>
       </ion-col>
     </ion-row>

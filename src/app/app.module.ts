@@ -17,6 +17,7 @@ import { ActualityPage } from '../pages/actuality/actuality';
 import { SocietyPage } from '../pages/society/society';
 import { TheLastJediPage } from '../pages/the-last-jedi/the-last-jedi';
 import { MoviePage } from '../pages/movie/movie';
+import {MoviedetailsPage } from '../pages/moviedetails/moviedetails';
 import { CineProche } from '../pages/cineproche/cineproche';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -34,8 +35,10 @@ import { WordsProvider } from '../providers/words/words';
     TheLastJediPage,
     ActualityPage,
     SocietyPage,
-    CineProche,
-    MoviePage
+    MoviePage,
+    MoviedetailsPage,
+    CineProche
+
   ],
   imports: [
     BrowserModule,
@@ -51,8 +54,9 @@ import { WordsProvider } from '../providers/words/words';
     TheLastJediPage,
     ActualityPage,
     SocietyPage,
+    MoviePage,
+    MoviedetailsPage,
     CineProche,
-    MoviePage
   ],
   providers: [
     StatusBar,
