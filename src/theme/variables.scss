@@ -45,7 +45,6 @@ $colors: (
   $SWGrey:rgba(63, 63, 63,0.5);
   $SWYellow:#e2d002;
   $SWOrange:#e15021;
-
   @mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
     @if $mq2 == false {
         @media ($maxmin: $mq01) {
