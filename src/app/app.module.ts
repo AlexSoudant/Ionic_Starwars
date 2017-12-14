@@ -6,6 +6,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { config } from './../config/config';
 
+// Native components
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -13,6 +15,7 @@ import { ActualityPage } from '../pages/actuality/actuality';
 import { SocietyPage } from '../pages/society/society';
 import { TheLastJediPage } from '../pages/the-last-jedi/the-last-jedi';
 import { MoviePage } from '../pages/movie/movie';
+import { CineProche } from '../pages/cineproche/cineproche';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,6 +28,7 @@ import { NewsProvider } from '../providers/news/news';
     TheLastJediPage,
     ActualityPage,
     SocietyPage,
+    CineProche,
     MoviePage
   ],
   imports: [
@@ -40,10 +44,12 @@ import { NewsProvider } from '../providers/news/news';
     TheLastJediPage,
     ActualityPage,
     SocietyPage,
+    CineProche,
     MoviePage
   ],
   providers: [
     StatusBar,
+    GoogleMaps,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     NewsProvider
