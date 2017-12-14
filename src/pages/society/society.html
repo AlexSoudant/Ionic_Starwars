@@ -5,15 +5,18 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-	<ion-navbar>
-		<button ion-button icon-only menuToggle>
-			<ion-icon name="menu"></ion-icon>
-		</button>
-		<img end id="logo-navbar" src="assets/imgs/TITREblanc.png">
-
-	</ion-navbar>
-</ion-header>
-
+    <ion-navbar>
+      <button ion-button icon-only menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <img id="logo-navbar" src="assets/imgs/TITREblanc.png">
+      <ion-buttons end>
+        <button ion-button id="join-button">
+          Want to join us ?
+        </button>
+      </ion-buttons>
+    </ion-navbar>
+  </ion-header>
 
 
 <ion-content no-padding class="master">
@@ -22,7 +25,7 @@
 
 	<ion-card>
 		<img src="assets/imgs/icon.png" />
-		<ion-card-content>
+		<ion-card-content class="card-society">
 			<ion-card-title text-center>
 				Star Wars Family
 			</ion-card-title>
