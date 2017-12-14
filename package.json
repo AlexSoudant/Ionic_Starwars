@@ -1,5 +1,5 @@
 {
-  "name": "StarWarsFamily",
+  "name": "starwarsfamily",
   "version": "0.0.1",
   "author": "Ionic Framework",
   "homepage": "http://ionicframework.com/",
@@ -55,14 +55,13 @@
         "API_KEY_FOR_IOS": "AIzaSyAfjx0jiCP2MLtVJ2d9nZUXUTCxV-KnnIA"
       }
     },
-      "ionic-plugin-keyboard": {},
-      "cordova-plugin-whitelist": {},
-      "cordova-plugin-device": {},
-      "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {}
-    },
-    "platforms": [
-      "android"
-    ]
+    "ionic-plugin-keyboard": {},
+    "cordova-plugin-whitelist": {},
+    "cordova-plugin-device": {},
+    "cordova-plugin-splashscreen": {},
+    "cordova-plugin-ionic-webview": {}
+  },
+  "platforms": [
+    "android"
+  ]
 }
-
