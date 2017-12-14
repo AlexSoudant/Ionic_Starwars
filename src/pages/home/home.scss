@@ -1,6 +1,12 @@
 page-home {
 
+  p {
+      @include font-size-map($paragraph-font-size);
+  }
 
+  h1 {
+    @include font-size-map($title-font-size);
+  }
 
   // ion-content.content.content-md {
   //   background-color: #151515;
