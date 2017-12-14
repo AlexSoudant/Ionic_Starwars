@@ -48,11 +48,17 @@
       <ion-col>
         <section>
           <h1 text-center class="home_h1">Did you knew it?</h1>
-          <p text-center class="home_p"> The actor who played Obi-Wan Kenobi, Alec Guiness, thought of the Star Wars films as "fairy-tale rubbish". </p>
+          <ion-spinner *ngIf="!(randomFacts | async)"></ion-spinner>
+          <!-- <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p> -->
+          <ion-card *ngFor="let facts of randomFacts | async">
+            <ion-card-content>
+              <p class="home_p" text-center>{{facts.text}}</p>
+            </ion-card-content>
+          </ion-card>
         </section>
       </ion-col>
     </ion-row>
-    
+
     <ion-row>
       <ion-col>
         <section>
@@ -66,7 +72,14 @@
       <ion-col>
         <section>
           <h1 text-center class="home_h1">Words from StarWars Fans</h1>
-          <p text-center class="home_p">"Joining a Starwars FanClub was a turning point in my life..." Jason McByrnes</p>
+          <ion-spinner *ngIf="!(allWords | async)"></ion-spinner>
+          <!-- <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p> -->
+          <ion-card *ngFor="let words of allWords | async">
+            <ion-card-content>
+              <p class="home_p" text-center>{{words.text}}</p>
+              <p class="home_name" text-center>{{words.name}}</p>
+            </ion-card-content>
+          </ion-card>
         </section>
       </ion-col>
     </ion-row>
