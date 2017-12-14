@@ -2,187 +2,187 @@ page-home {
 
 
 
-  ion-content.content.content-md {
-    background-color: #151515;
-    color: #ebd800;
-  }
+  // ion-content.content.content-md {
+  //   background-color: #151515;
+  //   color: #ebd800;
+  // }
 
-  ion-content.content-ios{
-    color: #ebd800;
-    background-color: #151515;
-  }
+  // ion-content.content-ios{
+  //   color: #ebd800;
+  //   background-color: #151515;
+  // }
 
-  ion-content {
+  // ion-content {
 
-    height: 100%;
-    background-color: #151515;
-    color: #ebd800;
+  //   height: 100%;
+  //   background-color: #151515;
+  //   color: #ebd800;
 
-    .fixed-content{
-      margin-top: 15%;
-    }
+  //   .fixed-content{
+  //     margin-top: 15%;
+  //   }
 
-    .scroll-content{
-      margin-top: 15%;
+  //   .scroll-content{
+  //     margin-top: 15%;
 
-      ion-grid.grid-poster, ion-row.row{
-        height: 100%;
-        margin: 1 auto;
-        padding: 0;
-        .poster{
-          height: 100%;
-          width: 100%;
-          margin: 1 auto;
-        }
+  //     ion-grid.grid-poster, ion-row.row{
+  //       height: 100%;
+  //       margin: 1 auto;
+  //       padding: 0;
+  //       .poster{
+  //         height: 100%;
+  //         width: 100%;
+  //         margin: 1 auto;
+  //       }
 
-      }
+  //     }
 
 
 
-      ion-grid.grid-header, ion-row.row{
-        height: 100%;
-        margin: 1 auto;
-        padding: 0;
+  //     ion-grid.grid-header, ion-row.row{
+  //       height: 100%;
+  //       margin: 1 auto;
+  //       padding: 0;
 
-        ion-col{
-          height: 100%;
-          padding: 0 0 0 0;
-        }
+  //       ion-col{
+  //         height: 100%;
+  //         padding: 0 0 0 0;
+  //       }
   
-        .logo{
-          height: 100%;
-        }
+  //       .logo{
+  //         height: 100%;
+  //       }
   
-        .infoFilm {
-          height: 100%;
-          margin: 1 auto;
+  //       .infoFilm {
+  //         height: 100%;
+  //         margin: 1 auto;
           
 
-          p {
-            margin-bottom: 15%;
-            //font-size: 100%;
-            text-align: center;
-            color: #e15021;
+  //         p {
+  //           margin-bottom: 15%;
+  //           //font-size: 100%;
+  //           text-align: center;
+  //           color: #e15021;
 
-          }
+  //         }
 
-        }
+  //       }
   
 
 
-      }
+  //     }
 
-      ion-grid.grid-footer, ion-row.row{
-        height: 100%;
-        margin: 1 auto;
-        padding: 0;
+  //     ion-grid.grid-footer, ion-row.row{
+  //       height: 100%;
+  //       margin: 1 auto;
+  //       padding: 0;
 
-        ion-col{
-          height: 100%;
-          padding: 0 0 0 0;
-        }
+  //       ion-col{
+  //         height: 100%;
+  //         padding: 0 0 0 0;
+  //       }
   
-        section {
-          height: 100%;
+  //       section {
+  //         height: 100%;
 
-          h1 {
-            text-align: center;
-          }
+  //         h1 {
+  //           text-align: center;
+  //         }
           
-          p {
+  //         p {
             
-            //font-size: 1em;
-            color: #ddd;
-            text-align: center;
-          }
-        }
+  //           //font-size: 1em;
+  //           color: #ddd;
+  //           text-align: center;
+  //         }
+  //       }
   
 
 
-      }
+  //     }
 
 
-    }
+  //   }
 
-  }
+  // }
 
-  @media screen and (min-width:359px) {
-    font-size : 16px;
-      h1 {
-        font-size : 18px;
-      }
-      .society {
-        margin-top: 5px;
-      }
-      .button-ios {
-        margin-top: 5px;
-        margin-left: 30px;
-      }
-      .button-md {
-        margin-top: 5px;
-        margin-left: 20px;
-      }
-    }
+  // @media screen and (min-width:359px) {
+  //   font-size : 16px;
+  //     h1 {
+  //       font-size : 18px;
+  //     }
+  //     .society {
+  //       margin-top: 5px;
+  //     }
+  //     .button-ios {
+  //       margin-top: 5px;
+  //       margin-left: 30px;
+  //     }
+  //     .button-md {
+  //       margin-top: 5px;
+  //       margin-left: 20px;
+  //     }
+  //   }
 
-  @media screen and (min-width:374px) {
-    font-size : 18px;
-      h1 {
-        font-size : 22px;
-      }
-      .society {
-        margin-top: 5px;
-      }
+  // @media screen and (min-width:374px) {
+  //   font-size : 18px;
+  //     h1 {
+  //       font-size : 22px;
+  //     }
+  //     .society {
+  //       margin-top: 5px;
+  //     }
 
-      .button-ios {
-        margin-top: 5px;
-        margin-left: 30px;
-      }
+  //     .button-ios {
+  //       margin-top: 5px;
+  //       margin-left: 30px;
+  //     }
 
-      .button-md {
-        margin-top: 5px;
-        margin-left: 20px;
-      }
+  //     .button-md {
+  //       margin-top: 5px;
+  //       margin-left: 20px;
+  //     }
 
-    }
+  //   }
 
-  @media screen and (min-width:769px) {
+  // @media screen and (min-width:769px) {
 
-    font-size : 40px;
-      h1 {
-        font-size : 60px;
-      }
-      .bar-button-menutoggle-ios ion-icon {
-        font-size: 300%;
-        color: #ebd800;
-      }
+  //   font-size : 40px;
+  //     h1 {
+  //       font-size : 60px;
+  //     }
+  //     .bar-button-menutoggle-ios ion-icon {
+  //       font-size: 300%;
+  //       color: #ebd800;
+  //     }
 
-      .bar-button-menutoggle-md ion-icon {
-        font-size: 300%;
-        color: #ebd800;
-      }
+  //     .bar-button-menutoggle-md ion-icon {
+  //       font-size: 300%;
+  //       color: #ebd800;
+  //     }
 
-      .button-ios {
-        margin-top: 10px;
-        margin-left: 40px;
-      }
+  //     .button-ios {
+  //       margin-top: 10px;
+  //       margin-left: 40px;
+  //     }
 
-      .button-md {
-        margin-top: 10px;
-        margin-left: 30px;
-      }
+  //     .button-md {
+  //       margin-top: 10px;
+  //       margin-left: 30px;
+  //     }
 
-      .society {
-        margin-top: 10px;
-      }
+  //     .society {
+  //       margin-top: 10px;
+  //     }
 
-      .button-inner{
-          font-size : 25px;
-      }
+  //     .button-inner{
+  //         font-size : 25px;
+  //     }
 
-      button.item.item-block.item-ios{
-        font-size: 2rem;
-      }
-    }
+  //     button.item.item-block.item-ios{
+  //       font-size: 2rem;
+  //     }
+  //   }
   
 
 }

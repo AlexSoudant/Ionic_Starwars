@@ -1,111 +1,17 @@
 page-movie {
 
-  .toolbar-md {
-    padding: 0 0 0 0;
-    background-color: #222;
-  }
-
-  .bar-button-default-md{
-    color: #ebd800;
-  }
-
-  .toolbar-ios {
-    padding: 0 0 0 0;
-    background-color: #222;
-  }
-
-  ion-header{
-    height: 8%;
-    // color: white;
-    background-color: #222;
-
-    ion-navbar{
-      height: 100%;
-      background-color: #222;
-      
-
-      div {
-        height: 100%;
-        background: #222;
-
-        // General
-        ion-grid.grid, ion-row.row{
-          height: 100%;
-          margin: 1 auto;
-          padding: 0;
-        }
-
-        ion-col.col{
-          height: 100%;
-          margin: 1 auto;
-        }
-
-        .joinButton{
-          height: 100%;
-          width: 80%;
-          margin: 1 auto;
-         
-
-        } 
-
-        .button-ios {
-          height: 80%;
-          width: 80%;
-          margin: 1 auto;
-          color: #ebd800;
-          background-color: #222;
-          border: thin solid #ddd;
-        }
-
-        .button-md {
-          height: 80%;
-          width: 80%;
-          margin: 1 auto;
-          color: #ebd800;
-          background-color: #222;
-          border: thin solid #ddd;
-        }
 
 
-        .bar-button-menutoggle-ios ion-icon {
-          // font-size: 200%;
-          color: #ebd800;
-        }
-        .menu{
-          height: 100%;
-          // width: 100%;
 
-        }
-
-        .society{
-          height: 80%;
-          
-        }
-
-        .button-md {
-          display: block;
-          height: 90%;
-          width: 90%;
-          margin: 1 auto;
-        }
-
-      }
-    }
-  }
-  ion-header.content.content-ios {
-    background-color: #151515;
-    color: #fff;
-  }
-
-  .card-background-page {
-    background-color: #151515;
 
 
     ion-card {
       position: relative;
       text-align: center;
       border: thin solid #ebd800;
-      
+      img {
+        filter: blur(1.5px);
+      }
     }
 
     .card-title {
@@ -126,85 +32,83 @@ page-movie {
       color: #ebd800;
     }
 
-    img {
-      filter: blur(1.5px);
-    }
 
-  }
 
-  @media screen and (min-width:359px) {
 
-      .card-md {
-        font-size : 18px;
-      }
-      .card-ios {
-        font-size : 18px;
-      }
-      .button-ios {
-        margin-top: 5px;
-        margin-left: 30px;
-      }
-      .button-md {
-        margin-top: 5px;
-        margin-left: 20px;
-      }
-    }
 
-  @media screen and (min-width:374px) {
-    .card-md {
-      font-size : 22px;
-    }
-    .card-ios {
-      font-size : 22px;
-    }
-    .button-ios {
-      margin-top: 5px;
-      margin-left: 30px;
-    }
+  // @media screen and (min-width:359px) {
 
-    .button-md {
-      margin-top: 5px;
-      margin-left: 20px;
-    }
+  //     .card-md {
+  //       font-size : 18px;
+  //     }
+  //     .card-ios {
+  //       font-size : 18px;
+  //     }
+  //     .button-ios {
+  //       margin-top: 5px;
+  //       margin-left: 30px;
+  //     }
+  //     .button-md {
+  //       margin-top: 5px;
+  //       margin-left: 20px;
+  //     }
+  //   }
 
-    }
+  // @media screen and (min-width:374px) {
+  //   .card-md {
+  //     font-size : 22px;
+  //   }
+  //   .card-ios {
+  //     font-size : 22px;
+  //   }
+  //   .button-ios {
+  //     margin-top: 5px;
+  //     margin-left: 30px;
+  //   }
 
-  @media screen and (min-width:769px) {
-    .card-md {
-      font-size : 40px;
-    }
-    .card-ios {
-      font-size : 40px;
-    }
-    .bar-button-menutoggle-ios ion-icon {
-      font-size: 300%;
-      color: #ebd800;
-    }
+  //   .button-md {
+  //     margin-top: 5px;
+  //     margin-left: 20px;
+  //   }
 
-    .bar-button-menutoggle-md ion-icon {
-      font-size: 300%;
-      color: #ebd800;
-    }
+  //   }
 
-    .button-ios {
-      margin-top: 10px;
-      margin-left: 40px;
-    }
+  // @media screen and (min-width:769px) {
+  //   .card-md {
+  //     font-size : 40px;
+  //   }
+  //   .card-ios {
+  //     font-size : 40px;
+  //   }
+  //   .bar-button-menutoggle-ios ion-icon {
+  //     font-size: 300%;
+  //     color: #ebd800;
+  //   }
 
-    .button-md {
-      margin-top: 10px;
-      margin-left: 30px;
-    }
+  //   .bar-button-menutoggle-md ion-icon {
+  //     font-size: 300%;
+  //     color: #ebd800;
+  //   }
 
-    .society {
-      margin-top: 10px;
-    }
+  //   .button-ios {
+  //     margin-top: 10px;
+  //     margin-left: 40px;
+  //   }
 
-    .button-inner{
-        font-size : 25px;
-    }
+  //   .button-md {
+  //     margin-top: 10px;
+  //     margin-left: 30px;
+  //   }
 
-  }
+  //   .society {
+  //     margin-top: 10px;
+  //   }
+
+  //   .button-inner{
+  //       font-size : 25px;
+  //   }
+
+  // }
   
 
 }

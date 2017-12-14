@@ -41,8 +41,8 @@ $colors: (
   dark:       #222
   );
 
-  $SWBlack:rgb(31, 31, 31);
-  $SWGrey:rgb(63, 63, 63);
+  $SWBlack:rgba(31, 31, 31, 0);
+  $SWGrey:rgba(63, 63, 63,0.5);
   $SWYellow:#e2d002;
   
 
@@ -107,6 +107,9 @@ $card-ios-text-color:#f4f4f4;
 $item-md-body-text-color:#f4f4f4;
 $item-ios-body-text-color:#f4f4f4;
 
+$card-ios-box-shadow-color: rgba(167, 167, 14, 0.322);
+$card-md-box-shadow-color: rgba(167, 167, 14, 0.322);
+
 @import "ionic.theme.default";
 
 
@@ -119,6 +122,7 @@ $item-ios-body-text-color:#f4f4f4;
   border-color: $SWYellow;
   color:$SWYellow;
 }
+
 
 
 // Ionicons
