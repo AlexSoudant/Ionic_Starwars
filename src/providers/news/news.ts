@@ -14,14 +14,17 @@ export class NewsProvider {
   private NEWS_DB_PATH: string = "news";
   private itemsCollection: AngularFirestoreCollection<News>;
   private items: Observable<News[]>;
+  private db: AngularFirestore;
 
   constructor(db: AngularFirestore) {
-    this.itemsCollection = db.collection<News>(this.NEWS_DB_PATH);
-    this.items = this.itemsCollection.valueChanges();
+    this.db = db;
+    /* this.itemsCollection = db.collection<News>(this.NEWS_DB_PATH);
+    this.items = this.itemsCollection.valueChanges(); */
   }
 
+
   getAll() {
-    return this.items;
+    return this.db.collection<News>(this.NEWS_DB_PATH).valueChanges();
   }
 
 }

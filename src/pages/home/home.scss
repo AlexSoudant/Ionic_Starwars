@@ -4,9 +4,36 @@ page-home {
       @include font-size-map($paragraph-font-size);
   }
 
+  p.home_name {
+    color: #6f8faf;
+  }
+
+  .card-ios p {
+    @include font-size-map($paragraph-font-size);
+  }
+
+  .card-md p {
+    @include font-size-map($paragraph-font-size);
+  }
+
   h1 {
     @include font-size-map($title-font-size);
   }
+
+  ion-navbar {
+    @include navbar-height-map($navbar-ios-height);
+  }
+
+  #join-button{
+    @include button-height-map($button-height);
+  }
+  
+  
+
+  // ion-content {
+  //   @include padding-top-map($padding-top); 
+  // }
+  
 
   // ion-content.content.content-md {
   //   background-color: #151515;

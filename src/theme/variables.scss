@@ -82,6 +82,55 @@ $colors: (
   }
   $title-font-size: (null: 60px, $lg: 40px, $md: 24px, $sm: 18px, $xs: 16px);
   $paragraph-font-size: (null: 40px, $lg: 40px, $md: 18px, $sm: 16px, $xs: 14px);
+  $button-font-size: (null: 25px, $lg: 25px, $md: 18px, $sm: 14px, $xs: 14px);
+  $togglemenu-font-size: (null: 40px, $lg: 25px, $md: 18px, $sm: 18px, $xs: 14px);
+
+  $navbar-ios-height:(null: 120px, $lg: 80px, $md: 60px, $sm: 60px, $xs: 40px);
+  $navbar-md-height:(null: 120px, $lg: 80px, $md: 60px, $sm: 60px, $xs: 40px);
+
+  @mixin navbar-height-map($navbar-height-map) {
+    @each $breakpoint, $nav-bar-height in $navbar-height-map {
+        @if $breakpoint == null {
+            height: $nav-bar-height;
+        } @else {
+            @include breakpoint($breakpoint) {
+              height: $nav-bar-height;
+            }
+        }
+    }
+  }
+
+  $button-height:(null: 70px, $lg: 70px, $md: 40px, $sm: 30px, $xs: 30px);
+  
+
+  @mixin button-height-map($button-height-map) {
+    @each $breakpoint, $button-height in $button-height-map {
+        @if $breakpoint == null {
+            height: $button-height;
+        } @else {
+            @include breakpoint($breakpoint) {
+              height: $button-height;
+            }
+        }
+    }
+  }
+
+  $button-width:(null: 200px, $lg: 200px, $md: 150px, $sm: 150px, $xs: 140px);
+  @mixin button-width-map($button-width-map) {
+    @each $breakpoint, $button-width in $button-width-map {
+        @if $breakpoint == null {
+            width: $button-width;
+        } @else {
+            @include breakpoint($breakpoint) {
+              width: $button-width;
+            }
+        }
+    }
+  }
+
+
+
+
 
 // App iOS Variables
 // --------------------------------------------------
@@ -151,15 +200,6 @@ $card-md-box-shadow-color: rgba(167, 167, 14, 0.322);
 @import "ionic.theme.default";
 
 
-#logo-navbar{
-  height: 30px;
-}
-
-#join-button{
-  border: solid 2px;
-  border-color: $SWYellow;
-  color:$SWYellow;
-}
 
 p.home_hook {
   color: $SWOrange;
@@ -171,6 +211,26 @@ h1.home_h1 {
 
 p.home_p {
   color: #ddd;
+}
+
+#join-button{
+  @include button-height-map($button-height);
+  @include button-width-map($button-width);
+
+  .button-inner{
+    @include font-size-map($button-font-size);
+  }
+}
+
+ion-navbar .bar-button-ios {
+  @include font-size-map($togglemenu-font-size);
+}
+ion-navbar .bar-button-md {
+  @include font-size-map($togglemenu-font-size);
+}
+
+ion-navbar #logo-navbar {
+  @include button-height-map($button-height);
 }
 
 
