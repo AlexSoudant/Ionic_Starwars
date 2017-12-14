@@ -37,12 +37,12 @@ export class CineProche {
       }
     };
 
-    this.map = GoogleMaps.create(document.getElementById('map_canvas'), mapOptions);
-    this.map.addEventListener(GoogleMapsEvent.MAP_READY).subscribe(() => {
+    this.map = GoogleMaps.create('map_canvas', mapOptions);
+    // this.map.addEventListener(GoogleMapsEvent.MAP_READY).subscribe(() => {
 
       // Wait the MAP_READY before using any methods.
-      /* this.map.one(GoogleMapsEvent.MAP_READY)
-        .then(() => { */
+       this.map.one(GoogleMapsEvent.MAP_READY)
+        .then(() => { 
       console.log('Map is ready!');
 
       // Now you can use all methods safely.

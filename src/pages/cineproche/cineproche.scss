@@ -3,10 +3,21 @@
 //   }
   
   page-cineproche {
-    .content {
+    #map_canvas {
+      width: 100%;
+      height: 100%;
+      transition: opacity 150ms ease-in
+    }
+
+    #map_canvas.show-map {
+      opacity: 1;
+    }
+
+    ion-app._gmaps_cdv_ .nav-decor{
       background-color: transparent !important;
     }
-      #map {
-        height: 100%;
-      }
+
+    .show-map {
+      opacity: 1;
+    }
   }

@@ -54,8 +54,15 @@
       "cordova-plugin-whitelist": {},
       "cordova-plugin-device": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-ionic-webview": {}
-    }
+      "cordova-plugin-ionic-webview": {},
+      "cordova-plugin-googlemaps": {
+        "API_KEY_FOR_ANDROID": "AIzaSyBo6u-ShIZ8MOzKFZnDkk-hARS8igrS5Pw",
+        "API_KEY_FOR_IOS": "AIzaSyAfjx0jiCP2MLtVJ2d9nZUXUTCxV-KnnIA"
+      }
+    },
+    "platforms": [
+      "android"
+    ]
   },
   "cordova-plugin-googlemaps": {
     "API_KEY_FOR_ANDROID": "AIzaSyBo6u-ShIZ8MOzKFZnDkk-hARS8igrS5Pw",
