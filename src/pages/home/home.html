@@ -16,11 +16,11 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col> 
+      <ion-col>
         <img class="poster" width="100%" height="auto" object-fit: cover center src="assets/imgs/last_jedi_poster.jpeg">
       </ion-col>
-    </ion-row> 
-  </ion-grid> 
+    </ion-row>
+  </ion-grid>
 
   <ion-grid class="grid-header">
     <ion-row>
@@ -42,17 +42,17 @@
 
   </ion-grid>
 
-  
+
   <ion-grid class="grid-footer">
     <ion-row>
       <ion-col>
         <section>
           <h1 text-center class="home_h1">Did you knew it?</h1>
-          <ion-spinner *ngIf="!(randomFacts | async)"></ion-spinner>
+          <!--<ion-spinner *ngIf="!(randomFacts | async)"></ion-spinner>-->
           <!-- <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p> -->
-          <ion-card *ngFor="let facts of randomFacts | async">
+          <ion-card>
             <ion-card-content>
-              <p class="home_p" text-center>{{facts.text}}</p>
+              <p class="home_p" text-center>{{randomFacts.text}}</p>
             </ion-card-content>
           </ion-card>
         </section>
@@ -63,7 +63,7 @@
       <ion-col>
         <section>
           <h1 text-center class="home_h1">News from the StarWars Family</h1>
-          <p text-center class="home_p" >Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
+          <p text-center class="home_p">Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
         </section>
       </ion-col>
     </ion-row>
