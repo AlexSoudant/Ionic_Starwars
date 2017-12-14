@@ -33,7 +33,7 @@ export class FactsProvider {
   }
 
   getRandom(): Observable<Facts[]> {
-    return this.get((ref => ref.orderBy('random').limitTo(1)));
+    return this.get((ref => ref.limit(1)));
   }
 
 
