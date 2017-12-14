@@ -228,6 +228,34 @@ p.home_p {
   @include font-size-map($cardcontent-font-size);
 }
 
+.card-society .card-title-ios{
+  @include font-size-map($cardtitle-font-size);
+}
+
+.card-society .card-title-md{
+  @include font-size-map($cardtitle-font-size);
+}
+
+.card-society div h3{
+
+  @include font-size-map($cardcontent-font-size);
+}
+
+.card-society div p{
+  
+    @include font-size-map($cardcontent-font-size);
+}
+
+#submitContact{
+  @include button-height-map($button-height);
+  // @include button-width-map($button-width);
+  .button-inner{
+    @include font-size-map($button-font-size);
+  }
+
+}
+
+
 .card-header-md{
   @include font-size-map($title-font-size);
 }
