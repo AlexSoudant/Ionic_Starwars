@@ -16,13 +16,13 @@ export class FactsProvider {
   private itemsCollection: AngularFirestoreCollection<Facts>;
   private items: Observable<Facts[]>;
   private db: AngularFirestore;
-  private allFacts: Array<Facts> = [];
+
 
   constructor(db: AngularFirestore) {
     this.db = db;
     this.itemsCollection = db.collection<Facts>(this.NEWS_DB_PATH);
     this.items = this.itemsCollection.valueChanges();
-    this.items.subscribe(doc => this.allFacts = doc);
+
   }
 
 
@@ -30,8 +30,26 @@ export class FactsProvider {
     return this.items;
   }
 
-  getRandom(): Facts {
-    return this.allFacts.length === 0 ? { text: null } : this.allFacts[Math.floor((Math.random() * this.allFacts.length))];
+  getRandom(): Promise<Facts> {
+    console.log('test');
+    return new Promise((resolve, reject) => {
+      this.items.toPromise().then(allFacts => {
+        let res: Facts;
+        if (allFacts.length === 0) {
+          res = { text: 'mhhh' };
+          //resolve();
+        } else {
+          let rindex = Math.floor((Math.random() * allFacts.length));
+          res = allFacts[rindex];
+        }
+        resolve(res);
+        //resolve(allFacts.length === 0 ? { text: null } : allFacts[Math.floor((Math.random() * allFacts.length))]);
+
+      }).catch(err => {
+        console.error(err);
+        reject(err);
+      });
+    });
   }
 
 

@@ -18,7 +18,7 @@ export class HomePage {
 
   constructor(public factsProvider: FactsProvider, wordsProvider: WordsProvider) {
 
-    this.randomFacts = factsProvider.getRandom();
+    factsProvider.getRandom().then(res => this.randomFacts = res).catch(error => console.error(error));
     this.allWords = wordsProvider.getAll();
 
   }
