@@ -15,14 +15,14 @@ declare var google: any;
 })
 export class CineProche {
 
-  map: GoogleMap;
-  constructor(private googleMaps: GoogleMaps) { }
+  public map: GoogleMap;
+  constructor(private GoogleMaps: GoogleMaps) { }
 
   ionViewDidLoad() {
-   this.loadMap();
+    this.loadMap();
   }
 
- loadMap() {
+  loadMap() {
 
     let mapOptions: GoogleMapOptions = {
       camera: {
@@ -35,7 +35,7 @@ export class CineProche {
       }
     };
 
-    this.map = this.googleMaps.create('map', mapOptions);
+    this.map = this.GoogleMaps.create('map_canvas', mapOptions);
 
     // Wait the MAP_READY before using any methods.
     this.map.one(GoogleMapsEvent.MAP_READY)
@@ -44,14 +44,14 @@ export class CineProche {
 
         // Now you can use all methods safely.
         this.map.addMarker({
-            title: 'Ionic',
-            icon: 'blue',
-            animation: 'DROP',
-            position: {
-              lat: 43.0741904,
-              lng: -89.3809802
-            }
-          })
+          title: 'Ionic',
+          icon: 'blue',
+          animation: 'DROP',
+          position: {
+            lat: 43.0741904,
+            lng: -89.3809802
+          }
+        })
           .then(marker => {
             marker.on(GoogleMapsEvent.MARKER_CLICK)
               .subscribe(() => {
@@ -134,4 +134,3 @@ export class CineProche {
 //     });
 //   }
 
- 
