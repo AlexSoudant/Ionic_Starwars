@@ -13,6 +13,7 @@ import { ActualityPage } from '../pages/actuality/actuality';
 import { SocietyPage } from '../pages/society/society';
 import { TheLastJediPage } from '../pages/the-last-jedi/the-last-jedi';
 import { MoviePage } from '../pages/movie/movie';
+import {MoviedetailsPage } from '../pages/moviedetails/moviedetails';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -25,7 +26,8 @@ import { NewsProvider } from '../providers/news/news';
     TheLastJediPage,
     ActualityPage,
     SocietyPage,
-    MoviePage
+    MoviePage,
+    MoviedetailsPage
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { NewsProvider } from '../providers/news/news';
     TheLastJediPage,
     ActualityPage,
     SocietyPage,
-    MoviePage
+    MoviePage,
+    MoviedetailsPage
   ],
   providers: [
     StatusBar,

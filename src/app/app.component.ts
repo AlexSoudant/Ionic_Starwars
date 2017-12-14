@@ -8,6 +8,7 @@ import { ActualityPage } from '../pages/actuality/actuality';
 import { SocietyPage } from '../pages/society/society';
 import { TheLastJediPage } from '../pages/the-last-jedi/the-last-jedi';
 import { MoviePage } from '../pages/movie/movie';
+import { MoviedetailsPage } from '../pages/moviedetails/moviedetails';
 
 
 @Component({
@@ -29,7 +30,8 @@ export class MyApp {
       { title: 'Actuality', component: ActualityPage },
       { title: 'Society', component: SocietyPage },
       { title: 'The last Jedi', component: TheLastJediPage },
-      { title: 'Movie', component: MoviePage }
+      { title: 'Movie', component: MoviePage },
+      { title: 'Moviedetails', component: MoviedetailsPage }
     ];
 
   }

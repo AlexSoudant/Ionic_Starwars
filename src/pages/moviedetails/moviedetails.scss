@@ -1,34 +1,20 @@
-page-movie {
+page-moviedetails {
+
+  ion-item-divider {
+    color : #488aff;
+    background-color: #488aff;
+  }
+
 
     ion-card {
       position: relative;
       text-align: center;
       border: thin solid #ebd800;
-      // img {
-      //   filter: blur(1px);
-      // }
     }
 
-    .card-title {
-      position: absolute;
-      top: 36%;
-      font-size: 2.0em;
-      width: 100%;
-      font-weight: bold;
-      color: #ebd800;
+    ion-card-title{
+      color : white
     }
-
-    .card-subtitle {
-      font-size: 1.0em;
-      position: absolute;
-      top: 52%;
-      width: 100%;
-
-      color: #ebd800;
-    }
-
-
-
 
 
   // @media screen and (min-width:359px) {
