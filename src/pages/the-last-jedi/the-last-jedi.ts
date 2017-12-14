@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage } from 'ionic-angular';
-import { SwapiService } from 'ng2-swapi';
 
 
 /**
@@ -17,7 +16,7 @@ import { SwapiService } from 'ng2-swapi';
 })
 export class TheLastJediPage {
 
-  constructor(private swapi: SwapiService) {
+  constructor() {
   }
 
   ionViewDidLoad() {
