@@ -1,5 +1,3 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { Facts } from './../../interfaces/facts.interface';
