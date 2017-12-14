@@ -44,6 +44,9 @@ $colors: (
   $SWBlack:rgba(31, 31, 31, 0);
   $SWGrey:rgba(63, 63, 63,0.5);
   $SWYellow:#e2d002;
+  $SWOrange:#e15021
+
+;
   
 
 
@@ -103,6 +106,8 @@ $card-ios-header-color:$SWYellow;
 $card-md-header-color:$SWYellow;
 $card-md-text-color:#f4f4f4;
 $card-ios-text-color:#f4f4f4;
+$card-ios-title-text-color:$SWYellow;
+$card-md-title-text-color:$SWYellow;
 
 $item-md-body-text-color:#f4f4f4;
 $item-ios-body-text-color:#f4f4f4;
