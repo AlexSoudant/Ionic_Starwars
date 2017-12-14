@@ -44,10 +44,6 @@ $colors: (
   $SWBlack:rgba(31, 31, 31, 0);
   $SWGrey:rgba(63, 63, 63,0.5);
   $SWYellow:#e2d002;
-<<<<<<< HEAD
-
-
-=======
   $SWOrange:#e15021;
 
   @mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
@@ -86,7 +82,6 @@ $colors: (
   }
   $title-font-size: (null: 60px, $lg: 40px, $md: 24px, $sm: 18px, $xs: 16px);
   $paragraph-font-size: (null: 40px, $lg: 40px, $md: 18px, $sm: 16px, $xs: 14px);
->>>>>>> e9abb6fcfb6a41525078ceaa6c54f16606722a27
 
 // App iOS Variables
 // --------------------------------------------------
