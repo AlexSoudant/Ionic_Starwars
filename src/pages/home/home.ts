@@ -13,18 +13,18 @@ import { Words } from '../../interfaces/words.interface';
 })
 export class HomePage {
 
-  public randomFacts: Observable<Facts[]>;
+  public randomFacts: Facts;
   public allWords: Observable<Words[]>;
-  
-    constructor(public factsProvider: FactsProvider, wordsProvider:WordsProvider) {
-  
-      this.randomFacts = factsProvider.getAll();
-      this.allWords = wordsProvider.getAll();
 
-    }
-    ionViewDidLoad() {
-      console.log('ionViewDidLoad HomePage' );
-      
-    }
+  constructor(public factsProvider: FactsProvider, wordsProvider: WordsProvider) {
+
+    this.randomFacts = factsProvider.getRandom();
+    this.allWords = wordsProvider.getAll();
+
+  }
+  ionViewDidLoad() {
+    console.log('ionViewDidLoad HomePage');
+
+  }
 
 }
