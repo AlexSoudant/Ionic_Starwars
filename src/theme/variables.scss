@@ -44,11 +44,6 @@ $colors: (
   $SWBlack:rgba(31, 31, 31, 0);
   $SWGrey:rgba(63, 63, 63,0.5);
   $SWYellow:#e2d002;
-<<<<<<< HEAD
-  $SWOrange:#e15021
-
-;
-=======
   $SWOrange:#e15021;
 
   @mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
@@ -63,7 +58,6 @@ $colors: (
         }
     }
   }
->>>>>>> 94b7e347db2bd9476bfc50bfaaa8c6d9153ade11
   
   // breakpoint variables
   $lg: 1023px;
