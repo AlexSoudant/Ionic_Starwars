@@ -19,7 +19,6 @@ import { MoviePage } from '../pages/movie/movie';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NewsProvider } from '../providers/news/news';
-import { SwapiService } from 'ng2-swapi';
 import { SwapiProvider } from '../providers/swapi/swapi';
 import { FactsProvider } from '../providers/facts/facts';
 import { WordsProvider } from '../providers/words/words';
@@ -55,7 +54,6 @@ import { WordsProvider } from '../providers/words/words';
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     NewsProvider,
-    SwapiService,
     SwapiProvider,
     FactsProvider,
     WordsProvider
