@@ -44,8 +44,44 @@ $colors: (
   $SWBlack:rgba(31, 31, 31, 0);
   $SWGrey:rgba(63, 63, 63,0.5);
   $SWYellow:#e2d002;
-  
+  $SWOrange:#e15021;
 
+  @mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
+    @if $mq2 == false {
+        @media ($maxmin: $mq01) {
+            @content;
+        }
+    }
+    @else {
+        @media (min-width: $mq01) and (max-width: $mq2) {
+            @content;
+        }
+    }
+  }
+  
+  // breakpoint variables
+  $lg: 1023px;
+  $md: 767px;
+  $sm: 413px;
+  $xs: 359px;
+  // $lg: 1170px;
+  // $md: 1024px;
+  // $sm: 640px;
+  // $xs: 480px;
+  // responsive font size mixin
+  @mixin font-size-map($font-size-map) {
+      @each $breakpoint, $font-size in $font-size-map {
+          @if $breakpoint == null {
+              font-size: $font-size;
+          } @else {
+              @include breakpoint($breakpoint) {
+                  font-size: $font-size;
+              }
+          }
+      }
+  }
+  $title-font-size: (null: 60px, $lg: 40px, $md: 24px, $sm: 18px, $xs: 16px);
+  $paragraph-font-size: (null: 40px, $lg: 40px, $md: 18px, $sm: 16px, $xs: 14px);
 
 // App iOS Variables
 // --------------------------------------------------
@@ -123,6 +159,17 @@ $card-md-box-shadow-color: rgba(167, 167, 14, 0.322);
   color:$SWYellow;
 }
 
+p.home_hook {
+  color: $SWOrange;
+}
+
+h1.home_h1 {
+  color: $SWYellow;
+}
+
+p.home_p {
+  color: #ddd;
+}
 
 
 // Ionicons
