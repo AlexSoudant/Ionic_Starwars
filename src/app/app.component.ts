@@ -30,10 +30,7 @@ export class MyApp {
       { title: 'Home', component: HomePage },
       { title: 'Actuality', component: ActualityPage },
       { title: 'Society', component: SocietyPage },
-      { title: 'The last Jedi', component: TheLastJediPage },
       { title: 'Movie', component: MoviePage },
-      { title: 'Moviedetails', component: MoviedetailsPage },
-      { title: 'CineProche', component: CineProche },
     ];
 
   }
