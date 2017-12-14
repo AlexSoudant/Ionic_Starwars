@@ -1,11 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { HttpClientModule } from '@angular/common/http';
+
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { config } from './../config/config';
 
+// Native components
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -14,10 +18,15 @@ import { SocietyPage } from '../pages/society/society';
 import { TheLastJediPage } from '../pages/the-last-jedi/the-last-jedi';
 import { MoviePage } from '../pages/movie/movie';
 import {MoviedetailsPage } from '../pages/moviedetails/moviedetails';
+import { CineProche } from '../pages/cineproche/cineproche';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { NewsProvider } from '../providers/news/news';
+import { SwapiProvider } from '../providers/swapi/swapi';
+import { FactsProvider } from '../providers/facts/facts';
+import { WordsProvider } from '../providers/words/words';
+
 
 @NgModule({
   declarations: [
@@ -27,13 +36,16 @@ import { NewsProvider } from '../providers/news/news';
     ActualityPage,
     SocietyPage,
     MoviePage,
-    MoviedetailsPage
+    MoviedetailsPage,
+    CineProche
+
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(config.firebase),
     AngularFirestoreModule.enablePersistence(),
     IonicModule.forRoot(MyApp),
+    HttpClientModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -43,13 +55,18 @@ import { NewsProvider } from '../providers/news/news';
     ActualityPage,
     SocietyPage,
     MoviePage,
-    MoviedetailsPage
+    MoviedetailsPage,
+    CineProche,
   ],
   providers: [
     StatusBar,
+    GoogleMaps,
     SplashScreen,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
-    NewsProvider
+    NewsProvider,
+    SwapiProvider,
+    FactsProvider,
+    WordsProvider
   ]
 })
 export class AppModule { }

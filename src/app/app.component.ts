@@ -8,7 +8,11 @@ import { ActualityPage } from '../pages/actuality/actuality';
 import { SocietyPage } from '../pages/society/society';
 import { TheLastJediPage } from '../pages/the-last-jedi/the-last-jedi';
 import { MoviePage } from '../pages/movie/movie';
+<<<<<<< HEAD
 import { MoviedetailsPage } from '../pages/moviedetails/moviedetails';
+=======
+import { CineProche } from '../pages/cineproche/cineproche';
+>>>>>>> e9abb6fcfb6a41525078ceaa6c54f16606722a27
 
 
 @Component({
@@ -31,7 +35,11 @@ export class MyApp {
       { title: 'Society', component: SocietyPage },
       { title: 'The last Jedi', component: TheLastJediPage },
       { title: 'Movie', component: MoviePage },
+<<<<<<< HEAD
       { title: 'Moviedetails', component: MoviedetailsPage }
+=======
+      { title: 'CineProche', component: CineProche },
+>>>>>>> e9abb6fcfb6a41525078ceaa6c54f16606722a27
     ];
 
   }
