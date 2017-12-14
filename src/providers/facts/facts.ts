@@ -1,6 +1,7 @@
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { Facts } from './../../interfaces/facts.interface';
+import { Injectable } from '@angular/core';
 
 /*
   Generated class for the FactsProvider provider.
