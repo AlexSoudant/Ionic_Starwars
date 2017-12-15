@@ -20,18 +20,21 @@ export class FilmProvider {
       })
     } else {
       let resObs = this.Swapi.getFilmById(id);
-      resObs.subscribe(
-        ((res) => {
-          this.filmsMap[id] = res;
-        }),
-        ((error) => {
-          console.log(error);
-        }),
-        () => {
-          console.log('FIN');
-        }
-      );
-      return resObs;
+      // resObs.subscribe(
+      //   ((res) => {
+      //     this.filmsMap[id] = res;
+      //   }),
+      //   ((error) => {
+      //     console.log(error);
+      //   }),
+      //   () => {
+      //     console.log('FIN');
+      //   }
+      // );
+      return resObs.map(film => {
+        this.filmsMap[id] = film;
+        return film;
+      });
 
 
     }
