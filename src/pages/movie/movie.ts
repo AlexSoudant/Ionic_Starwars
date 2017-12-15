@@ -25,7 +25,7 @@ export class MoviePage {
 
   }
 
-  goToDetailsPage(id: String) {
+  goToDetailsPage(id: string) {
     this.navCtrl.push(MoviedetailsPage, {
       filmId: id
     });

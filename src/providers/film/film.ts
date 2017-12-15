@@ -7,7 +7,9 @@ import { SwapiProvider } from '../swapi/swapi';
 
 @Injectable()
 export class FilmProvider {
+
   private filmsMap = {};
+
   constructor(private Swapi: SwapiProvider) { }
 
   getFilmById(id: string): Observable<Film> {
@@ -35,9 +37,9 @@ export class FilmProvider {
     }
   }
 
-  getFilmsById(ids: Array<string>): Observable<Array<Film>> {
-    const films: Array<Observable<Film>> = ids.map(id => this.getFilmById(id));
-    return Observable.forkJoin(films);
-  }
+  // getFilmsById(ids: Array<string>): Observable<Array<Film>> {
+  //   const films: Array<Observable<Film>> = ids.map(id => this.getFilmById(id));
+  //   return Observable.forkJoin(films);
+  // }
 
 }
