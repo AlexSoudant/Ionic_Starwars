@@ -5,7 +5,7 @@
     </button>
     <img id="logo-navbar" src="assets/imgs/TITREblanc.png">
     <ion-buttons end>
-      <button  ion-button [navPush]="societyPage" id="join-button">
+      <button ion-button [navPush]="societyPage" id="join-button">
         Want to join us ?
       </button>
     </ion-buttons>
@@ -58,10 +58,10 @@
         <section>
           <h1 text-center class="home_h1">News from the StarWars Family</h1>
           <ion-card>
-              <ion-card-content>
-                  <p text-center class="home_p">Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
-              </ion-card-content>
-            </ion-card>
+            <ion-card-content>
+              <p text-center class="home_p">Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
+            </ion-card-content>
+          </ion-card>
         </section>
       </ion-col>
     </ion-row>
@@ -74,8 +74,8 @@
           <!-- <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p> -->
           <ion-card *ngFor="let words of allWords | async">
             <ion-card-content>
-              <p class="home_p" text-center>{{words.text}}</p>
-              <p class="home_name" text-center>{{words.name}}</p>
+              <p class="home_p" text-center>{{words?.text}}</p>
+              <p class="home_name" text-center>{{words?.name}}</p>
             </ion-card-content>
           </ion-card>
         </section>
