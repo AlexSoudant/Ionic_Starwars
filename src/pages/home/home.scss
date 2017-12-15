@@ -4,6 +4,9 @@ page-home {
       @include font-size-map($paragraph-font-size);
   }
 
+  img {
+    align-items: center;
+  }
   p.home_name {
     color: #6f8faf;
   }

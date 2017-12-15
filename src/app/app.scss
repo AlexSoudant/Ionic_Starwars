@@ -31,7 +31,6 @@ body{
     }
 }
 
-
 #logo-navbar {
     height: 30px;
   }
@@ -46,3 +45,12 @@ body{
 .card h3{
     color: $SWOrange;
 }
+
+.toolbar-title{
+    @include font-size-map($toolbar-title-font-size);
+  }
+
+.toolbar ion-title{
+    padding: 0 20px 1px;
+}
+
