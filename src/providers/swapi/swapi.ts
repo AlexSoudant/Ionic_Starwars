@@ -1,8 +1,9 @@
 
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/';
 import { Http, Response } from '@angular/http';
+import { Film } from './../../interfaces/film.interface';
 
 @Injectable()
 export class SwapiProvider {
@@ -13,7 +14,7 @@ export class SwapiProvider {
 
   private NB_ITEM_BY_PAGE: Number = 10;
 
-  constructor(private http: Http) { }
+  constructor(@Inject(Http) private http: Http) { }
 
   private get(path: String, id: String = '', params: String = ''): Observable<Object> {
 
@@ -94,7 +95,7 @@ export class SwapiProvider {
     });
   }
 
-  getFilmById(id: String): Observable<Object> {
+  getFilmById(id: String): Observable<any> {
     if (id) {
       return this.get('films', id).map((resp: Object) => {
         return this.allUrlsToId(resp);

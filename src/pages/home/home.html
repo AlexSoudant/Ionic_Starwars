@@ -48,8 +48,8 @@
       <ion-col>
         <section>
           <h1 text-center class="home_h1">Did you knew it?</h1>
-          <!--<ion-spinner *ngIf="!(randomFacts | async)"></ion-spinner>-->
-          <!-- <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p> -->
+          <ion-spinner *ngIf="!(randomFacts | async)"></ion-spinner>
+          <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p>
           <ion-card>
             <ion-card-content>
               <p class="home_p" text-center>{{randomFacts?.text}}</p>

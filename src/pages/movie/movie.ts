@@ -1,9 +1,8 @@
-import { Component } from '@angular/core';
+import { Component , OnInit, Input} from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {MoviedetailsPage } from '../moviedetails/moviedetails';
-import { FilmProvider } from './../../prodivers/film/film';
-import { Film } from './../../interfaces/film';
-
+import { FilmProvider } from './../../providers/film/film';
+import { Film } from './../../interfaces/film.interface';
 
 /**
  * Generated class for the MoviePage page.
@@ -19,7 +18,28 @@ import { Film } from './../../interfaces/film';
 })
 export class MoviePage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private filmProvider: FilmProvider) {
+  }
+
+  @Input() filmsId: Array<String> = [];
+
+  films: Array<Object> = [];
+
+  ngOnInit() {
+    if (this.filmsId.length > 0) {
+      this.filmProvider.getFilmsById(this.filmsId).subscribe(
+        ((res) => {
+          this.films = res.map(film => { return { film: film, showDetail: false }; });
+        }),
+        ((error) => {
+          console.log(error);
+        }),
+        () => {
+          console.log('FIN');
+        }
+      );
+    }
+
   }
 
   goToDetailsPage(){
@@ -27,6 +47,9 @@ export class MoviePage {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad MoviePage');
+    console.log('ionViewDidLoad MoviePage', this.films);
   }
 }
+
+
+
