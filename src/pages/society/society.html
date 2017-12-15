@@ -81,19 +81,19 @@
 
 				<ion-list padding>
 					<ion-item>
-						<ion-textarea placeholder="Enter your name" class="input"></ion-textarea>
+						<ion-textarea value="{{first_name}}" placeholder="Enter your name" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
-						<ion-textarea placeholder="Enter your firstname" class="input"></ion-textarea>
+						<ion-textarea value="{{last_name}}" placeholder="Enter your firstname" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
-						<ion-textarea placeholder="Enter your email" class="input"></ion-textarea>
+						<ion-textarea value="email" placeholder="Enter your email" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
-						<ion-textarea placeholder="Enter your message" class="input"></ion-textarea>
+						<ion-textarea value="message" placeholder="Enter your message" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
-						<button ion-button block (click)="presentAlert()">Send</button>
+						<button ion-button block (click)="sendMessage()">Send</button>
 					</ion-item>
 				</ion-list>
 			</div>

@@ -28,6 +28,7 @@ import { SwapiProvider } from '../providers/swapi/swapi';
 import { FactsProvider } from '../providers/facts/facts';
 import { WordsProvider } from '../providers/words/words';
 import { FilmProvider } from '../providers/film/film';
+import { FormProvider } from '../providers/form/form';
 
 import { HttpModule } from '@angular/http';
 
@@ -72,6 +73,7 @@ import { HttpModule } from '@angular/http';
     FactsProvider,
     WordsProvider,
     FilmProvider,
+    FormProvider,
   ]
 })
 export class AppModule { }
