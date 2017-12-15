@@ -1,3 +1,3 @@
 export interface Facts {
-    text: string;
+    texts: Array<string>;
 }
