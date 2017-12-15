@@ -70,12 +70,12 @@
       <ion-col>
         <section>
           <h1 text-center class="home_h1">Words from StarWars Fans</h1>
-          <ion-spinner *ngIf="!(allWords | async)"></ion-spinner>
+          <!-- <ion-spinner *ngIf="!(word | async)"></ion-spinner> -->
           <!-- <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p> -->
-          <ion-card *ngFor="let words of allWords | async">
+          <ion-card>
             <ion-card-content>
-              <p class="home_p" text-center>{{words?.text}}</p>
-              <p class="home_name" text-center>{{words?.name}}</p>
+              <p class="home_p" text-center>{{word?.text}}</p>
+              <p class="home_name" text-center>{{word?.name}}</p>
             </ion-card-content>
           </ion-card>
         </section>
