@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
 import { SocietyPage } from './society';
 
+
+
 @NgModule({
   declarations: [
     SocietyPage,
@@ -10,4 +12,4 @@ import { SocietyPage } from './society';
     IonicPageModule.forChild(SocietyPage),
   ],
 })
-export class SocietyPageModule {}
+export class SocietyPageModule { }
