@@ -215,6 +215,13 @@ p.home_p {
   color: #ddd;
 }
 
+.card.card-ios {
+  background-color: rgba(63, 63, 63, 0.75);
+}
+.card.card-md {
+  background-color: rgba(63, 63, 63, 0.75);
+}
+
 .card-actuality .card-header-ios{
   @include font-size-map($cardtitle-font-size);
 }
@@ -280,6 +287,7 @@ ion-navbar .bar-button-md {
 ion-navbar #logo-navbar {
   @include button-height-map($button-height);
 }
+
 
 
 // Ionicons
