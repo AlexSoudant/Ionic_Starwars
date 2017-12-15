@@ -12,6 +12,7 @@ export class PeopleProvider {
 
   private lastPeopleSearch: Search = null;
   private result: Search;
+  private allPeople: Array<any>;
 
   constructor(private Swapi: SwapiProvider) { }
 
@@ -32,11 +33,11 @@ export class PeopleProvider {
     //     observer.complete();
     //   });
     // } else {
-      return this.Swapi.getPeopleById(id);
+    return this.Swapi.getPeopleById(id);
     // }
   }
 
-  getPeoplesByName(name: String, page: Number = undefined): Observable<PeopleSearch> {
+  getPeoplesByName(name: String, page: Number = undefined): Observable<any> {
     if (name && name.length && name.length > 0 && (!page || page >= 0)) {
       return this.Swapi.getPeoplesByName(name, page || undefined).map((resp: Object) => {
         const res = this.objectToSearch(resp);
@@ -70,7 +71,7 @@ export class PeopleProvider {
       return;
     }
 
-    
+
     this.result.Peoples = obj['results'];
     this.result.Pages = Math.ceil(Number(obj['count']) / Number(this.Swapi.getNbItemByPage()));
     this.result.Page = obj['page'];
