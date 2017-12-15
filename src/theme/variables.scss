@@ -34,17 +34,21 @@ $app-direction: ltr;
 // The "primary" color is the only required color in the map.
 
 $colors: (
-  primary:    #488aff,
+  primary:    #e2d002,
   secondary:  #32db64,
   danger:     #f53d3d,
   light:      #f4f4f4,
-  dark:       #222
+  dark:       #222,
+  greyopaque: rgba(0, 0, 0, 0)
   );
 
   $SWBlack:rgba(31, 31, 31, 0);
-  $SWGrey:rgba(63, 63, 63,0.5);
+  $SWGrey:rgba(63, 63, 63,0.7);
+  $SWGreyOpaque: rgba(63, 63, 63, 0.9);
   $SWYellow:#e2d002;
   $SWOrange:#e15021;
+  $SWRed:#cc0000;
+
   @mixin breakpoint($mq01: 0, $mq2: false, $maxmin: max-width) {
     @if $mq2 == false {
         @media ($maxmin: $mq01) {
@@ -81,6 +85,7 @@ $colors: (
   }
   $cardtitle-font-size: (null: 40px, $lg: 40px, $md: 24px, $sm: 18px, $xs: 16px);
   $cardcontent-font-size: (null: 20px, $lg: 20px, $md: 18px, $sm: 18px, $xs: 16px);
+  $toolbar-title-font-size: (null: 48px, $lg: 48px, $md: 24px, $sm: 18px, $xs: 16px);
   $title-font-size: (null: 40px, $lg: 40px, $md: 24px, $sm: 18px, $xs: 16px);
   $paragraph-font-size: (null: 40px, $lg: 40px, $md: 18px, $sm: 16px, $xs: 14px);
   $button-font-size: (null: 25px, $lg: 25px, $md: 18px, $sm: 14px, $xs: 14px);
@@ -129,10 +134,10 @@ $colors: (
     }
   }
 
+ 
 
 
-
-
+  
 // App iOS Variables
 // --------------------------------------------------
 // iOS only Sass variables can go here
@@ -178,8 +183,8 @@ $toolbar-ios-text-color:$SWYellow;
 // $button-ios-border-color:$SWYellow;
 // $button-md-border-style:solid;
 // $button-ios-border-style:solid;
-$menu-md-background:$SWGrey;
-$menu-ios-background:$SWGrey;
+$menu-md-background:$SWGreyOpaque;
+$menu-ios-background:$SWGreyOpaque;
 $label-md-text-color:$SWYellow;
 $label-ios-text-color:$SWYellow;
 // $toolbar-ios-title-font-size: 20px;
@@ -198,6 +203,8 @@ $item-ios-body-text-color:#f4f4f4;
 
 $card-ios-box-shadow-color: rgba(167, 167, 14, 0.322);
 $card-md-box-shadow-color: rgba(167, 167, 14, 0.322);
+
+$toolbar-ios-title-text-color: $SWRed;
 
 @import "ionic.theme.default";
 
@@ -267,6 +274,16 @@ p.home_p {
 .card-header-md{
   @include font-size-map($title-font-size);
 }
+
+.item p.content_list{
+  @include font-size-map($paragraph-font-size);
+}
+
+.toolbar{
+  @include button-height-map($navbar-ios-height);
+}
+
+
 
 #join-button{
   @include button-height-map($button-height);
