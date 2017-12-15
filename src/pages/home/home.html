@@ -44,6 +44,7 @@
 
 
   <ion-grid class="grid-footer">
+
     <ion-row>
       <ion-col>
         <section>
@@ -52,7 +53,7 @@
           <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p>
           <ion-card>
             <ion-card-content>
-              <p class="home_p" text-center>{{randomFacts?.text}}</p>
+              <p class="home_p" text-center>{{randomFact|async}}</p>
             </ion-card-content>
           </ion-card>
         </section>
