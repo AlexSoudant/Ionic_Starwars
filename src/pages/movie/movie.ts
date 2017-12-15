@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {MoviedetailsPage } from '../moviedetails/moviedetails';
-
+import { FilmProvider } from './../../prodivers/film/film';
+import { Film } from './../../interfaces/film';
 
 
 /**
