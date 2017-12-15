@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Film } from '../../interfaces/film.interface';
+import { FilmProvider } from './../../providers/film/film';
+
 
 
 
@@ -16,16 +19,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'moviedetails.html',
 })
 export class MoviedetailsPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  private filmId: String;
+  public film: Film;
+  constructor(public navCtrl: NavController, public navParams: NavParams, public filmProvider: FilmProvider) {
+    this.filmId = navParams.get("filmId");
   }
 
-  goBackToPreviousPage(){
-   this.navCtrl.pop();
+  goBackToPreviousPage() {
+    this.navCtrl.pop();
   }
 
   ionViewDidLoad() {
+
     console.log('ionViewDidLoad MoviedetailsPage');
+    this.filmProvider.getFilmById(this.filmId).subscribe(
+      ((res) => {
+        this.film = res;
+      }),
+      ((error) => {
+        console.log(error);
+      }),
+      () => {
+        console.log('FIN');
+      }
+    );
   }
 
 }

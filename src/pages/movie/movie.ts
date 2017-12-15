@@ -1,6 +1,6 @@
-import { Component , OnInit, Input} from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {MoviedetailsPage } from '../moviedetails/moviedetails';
+import { MoviedetailsPage } from '../moviedetails/moviedetails';
 import { FilmProvider } from './../../providers/film/film';
 import { Film } from './../../interfaces/film.interface';
 
@@ -24,26 +24,31 @@ export class MoviePage {
   @Input() filmsId: Array<String> = [];
 
   films: Array<Object> = [];
+  film: Film;
 
   ngOnInit() {
-    if (this.filmsId.length > 0) {
-      this.filmProvider.getFilmsById(this.filmsId).subscribe(
-        ((res) => {
-          this.films = res.map(film => { return { film: film, showDetail: false }; });
-        }),
-        ((error) => {
-          console.log(error);
-        }),
-        () => {
-          console.log('FIN');
-        }
-      );
-    }
+    //if (this.filmsId.length > 0) {
+    this.filmProvider.getFilmById('1').subscribe(
+      ((res) => {
+        //this.films = res.map(film => { return { film: film, showDetail: false }; });
+        this.film = res;
+        console.log('---------------');
+        console.log(this.film);
+        console.log('---------------');
+      }),
+      ((error) => {
+        console.log(error);
+      }),
+      () => {
+        console.log('FIN');
+      }
+    );
+    // }
 
   }
 
-  goToDetailsPage(){
-      this.navCtrl.push(MoviedetailsPage);
+  goToDetailsPage() {
+    this.navCtrl.push(MoviedetailsPage);
   }
 
   ionViewDidLoad() {

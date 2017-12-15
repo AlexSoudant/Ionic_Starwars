@@ -8,13 +8,13 @@ import { Film } from './../../interfaces/film.interface';
 @Injectable()
 export class SwapiProvider {
 
-  private URLAPI: String = 'http://www.swapi.co/api/';
+  private URLAPI: String = 'https://www.swapi.co/api/';
 
   private KEYS_OF_URLID: Array<String> = ['films', 'characters', 'planets', 'species', 'starships', 'vehicles', 'homeworld', 'url'];
 
   private NB_ITEM_BY_PAGE: Number = 10;
 
-  constructor(@Inject(Http) private http: Http) { }
+  constructor( @Inject(Http) private http: Http) { }
 
   private get(path: String, id: String = '', params: String = ''): Observable<Object> {
 
