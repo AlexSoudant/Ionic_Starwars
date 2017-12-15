@@ -24,7 +24,7 @@ export class FormProvider {
     // this.items = this.itemsCollection.valueChanges();
   }
 
-  pushMessage(item: ContactForm) {
-    this.itemsCollection.add(item);
+  pushMessage(item: ContactForm): Promise<any> {
+    return this.itemsCollection.add(item);
   }
 }
