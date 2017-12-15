@@ -1,7 +1,7 @@
 import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
-import { ContactForm } from './../../interfaces/ContactForm.interface';
 import { Injectable } from '@angular/core';
+import { ContactForm } from '../../interfaces/contactForm.interface';
 
 /*
   Generated class for the FactsProvider provider.
@@ -12,19 +12,19 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class FormProvider {
 
-  private FACTS_DB_PATH: string = "form";
+  private FORM_DB_PATH: string = "contactForm";
   private itemsCollection: AngularFirestoreCollection<ContactForm>;
-  private item: Observable<ContactForm[]>;
+  private items: Observable<ContactForm[]>;
   private db: AngularFirestore;
 
 
   constructor(db: AngularFirestore) {
     this.db = db;
-    this.itemsCollection = db.collection<ContactForm>('items');
+    this.itemsCollection = this.db.collection<ContactForm>(this.FORM_DB_PATH);
     // this.items = this.itemsCollection.valueChanges();
   }
 
-  pushMessage(item) {
-    this.itemsCollection.add(item);
+  pushMessage(item: ContactForm): Promise<any> {
+    return this.itemsCollection.add(item);
   }
 }

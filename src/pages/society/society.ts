@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-import { ContactForm } from '../../interfaces/contactForm.interface';
+import { LoadingController } from 'ionic-angular';
+
+// import { ContactForm } from '../../interfaces/contactForm.interface';
 
 import { FormProvider } from './../../providers/form/form';
 
@@ -19,29 +21,29 @@ import { FormProvider } from './../../providers/form/form';
 })
 export class SocietyPage {
 
-  private first_name: string;
-  private last_name: string;
-  private email: string;
-  private message: string;
+  public first_name: string;
+  public last_name: string;
+  public email: string;
+  public message: string;
+  errorMessage = "Error message!";
+  formSettings = {
+    theme: 'ios'
+  };
 
-  constructor(public formProvider: FormProvider, public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
+
+  constructor(public formProvider: FormProvider, public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController, public loadingCtrl: LoadingController) {
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SocietyPage');
   }
 
-  errorMessage = "Error message!"
-  formSettings = {
-    theme: 'ios'
-  };
 
 
 
-  presentAlert() {
-    let isConnected = true;
+  presentAlert(ok: boolean) {
 
-    if (isConnected) {
+    if (ok) {
       let alert = this.alertCtrl.create({
         title: 'Message',
         subTitle: 'Your message is send',
@@ -51,20 +53,47 @@ export class SocietyPage {
     }
     else {
       let alert = this.alertCtrl.create({
-        title: 'Message',
+        title: 'Oups',
         subTitle: 'Your message is not send',
         buttons: ['OK']
       });
       alert.present();
     }
-  };
+  }
 
-  sendMessage() {
-    
-    console.log("sendMessage", this.first_name, this.last_name)
-    let message= {"first_name": this.first_name, "last_name": this.last_name, "email": this.email, "message": this.message}
-    this.formProvider.pushMessage(message)
-    this.presentAlert()
-  };
+  sendMessage(): void {
+
+    console.log("sendMessage", this.first_name, this.last_name);
+
+    let message = {
+      first_name: this.first_name,
+      last_name: this.last_name,
+      email: this.email,
+      message: this.message
+    };
+
+    let loader = this.loadingCtrl.create({
+      content: "sending message..."
+    });
+
+    loader.present();
+
+    this.formProvider.pushMessage(message).then(() => {
+      this.reinitMessage();
+      loader.dismiss();
+      this.presentAlert(true);
+    }).catch(error => {
+      loader.dismiss();
+      console.error(error);
+      this.presentAlert(false);
+    });
+  }
+
+  reinitMessage(): void {
+    this.first_name = null;
+    this.last_name = null;
+    this.email = null;
+    this.message = null;
+  }
 
 }

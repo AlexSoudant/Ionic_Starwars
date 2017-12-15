@@ -76,16 +76,16 @@
 
 				<ion-list padding>
 					<ion-item>
-						<ion-textarea value="{{first_name}}" placeholder="Enter your firstname" class="input"></ion-textarea>
+						<ion-textarea [(ngModel)]="first_name" placeholder="Enter your name" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
-						<ion-textarea value="{{last_name}}" placeholder="Enter your last name" class="input"></ion-textarea>
+						<ion-textarea [(ngModel)]="last_name" placeholder="Enter your firstname" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
-						<ion-textarea value="email" placeholder="Enter your email" class="input"></ion-textarea>
+						<ion-textarea [(ngModel)]="email" placeholder="Enter your email" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
-						<ion-textarea value="message" placeholder="Enter your message" class="input"></ion-textarea>
+						<ion-textarea [(ngModel)]="message" placeholder="Enter your message" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
 						<button ion-button block (click)="sendMessage()">Send</button>
