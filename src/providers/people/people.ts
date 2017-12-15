@@ -8,7 +8,7 @@ import { Subject } from 'rxjs/';
 
 
 @Injectable()
-export class PeopleService {
+export class PeopleProvider {
 
   private lastPeopleSearch: Search = null;
   private result: Search;
@@ -20,20 +20,20 @@ export class PeopleService {
   }
 
   getPeopleById(id: String): Observable<any> {
-    let result = null;
-    if (this.history()) {
-      result = this.history().Peoples.find(people => { return people.id === id; });
-    }
-    if (result && result.name) {
-      // const res = new Subject.create;
-      // return res.asObservable();
-      return Observable.create(observer => {
-        observer.next(result);
-        observer.complete();
-      });
-    } else {
+    // let result = null;
+    // if (this.history()) {
+    //   result = this.history().Peoples.find(people => { return people.id === id; });
+    // }
+    // if (result && result.name) {
+    //   // const res = new Subject.create;
+    //   // return res.asObservable();
+    //   return Observable.create(observer => {
+    //     observer.next(result);
+    //     observer.complete();
+    //   });
+    // } else {
       return this.Swapi.getPeopleById(id);
-    }
+    // }
   }
 
   getPeoplesByName(name: String, page: Number = undefined): Observable<PeopleSearch> {

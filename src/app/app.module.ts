@@ -27,6 +27,7 @@ import { FactsProvider } from '../providers/facts/facts';
 import { WordsProvider } from '../providers/words/words';
 import { FilmProvider } from '../providers/film/film';
 import { FormProvider } from '../providers/form/form';
+import { PeopleProvider } from '../providers/people/people';
 
 import { HttpModule } from '@angular/http';
 
@@ -72,6 +73,7 @@ import { HttpModule } from '@angular/http';
     WordsProvider,
     FilmProvider,
     FormProvider,
+    PeopleProvider,
   ]
 })
 export class AppModule { }
