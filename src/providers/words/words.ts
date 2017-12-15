@@ -29,4 +29,5 @@ export class WordsProvider {
     return this.db.collection<Words>(this.NEWS_DB_PATH).valueChanges();
   }
 
+
 }

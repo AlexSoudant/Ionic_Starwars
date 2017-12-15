@@ -28,7 +28,14 @@ export class FactsProvider {
 
 
   getAll(): Observable<Array<String>> {
-    return this.allFacts.map(fact => fact.texts);
+    return this.allFacts.map(fact => {
+      if (fact && fact.texts) {
+        return fact.texts;
+      } else {
+        return [];
+      }
+    }
+    );
   }
 
   // getRandom(): Promise<String | null> {

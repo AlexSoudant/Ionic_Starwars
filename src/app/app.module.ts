@@ -1,9 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
-import { HttpClientModule } from '@angular/common/http';
-import { Http, Response } from '@angular/http';
-
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
@@ -29,6 +26,8 @@ import { SwapiProvider } from '../providers/swapi/swapi';
 import { FactsProvider } from '../providers/facts/facts';
 import { WordsProvider } from '../providers/words/words';
 import { FilmProvider } from '../providers/film/film';
+import { FormProvider } from '../providers/form/form';
+import { PeopleProvider } from '../providers/people/people';
 
 import { HttpModule } from '@angular/http';
 
@@ -49,7 +48,6 @@ import { HttpModule } from '@angular/http';
     AngularFireModule.initializeApp(config.firebase),
     AngularFirestoreModule.enablePersistence(),
     IonicModule.forRoot(MyApp),
-    HttpClientModule,
     HttpModule,
   ],
   bootstrap: [IonicApp],
@@ -74,6 +72,8 @@ import { HttpModule } from '@angular/http';
     FactsProvider,
     WordsProvider,
     FilmProvider,
+    FormProvider,
+    PeopleProvider,
   ]
 })
 export class AppModule { }
