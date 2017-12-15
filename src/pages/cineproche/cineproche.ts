@@ -2,12 +2,17 @@ import { GoogleMaps, GoogleMap, GoogleMapsEvent, GoogleMapOptions, CameraPositio
 import { Geolocation } from '@ionic-native/geolocation';
 import { Component } from "@angular/core/";
 import { NavController, Platform } from 'ionic-angular';
+
+declare var google;
+
 @Component({
   selector: 'page-cineproche',
   templateUrl: 'cineproche.html'
 })
 export class CineProche {
-  private DarkVadorImage: string = 'http://pngimg.com/uploads/darth_vader/darth_vader_PNG14.png';
+  places: any[];
+
+  private DarkVadorImage: any;
 
 
   public map: GoogleMap;
@@ -30,6 +35,7 @@ export class CineProche {
 
     this.map = this.googleMaps.create(element);
 
+    this.DarkVadorImage = '../../assets/imgs/DarkVadorImage.jpg';
 
     // Geolocation
     this.geoLocation.getCurrentPosition().then((resp) => {
@@ -51,7 +57,18 @@ export class CineProche {
           lng: resp.coords.longitude,
 
         },
+        //  icon: this.DarkVadorImage
       })
+
+      this.getRestaurants(userPosition).then((results: Array<any>) => {
+        this.places = results;
+        for (let i = 0; i < results.length; i++) {
+          this.map.addMarker(results[i]);
+        }
+      }, (status) => console.log(status));
+
+      //   this.addMarker();
+
 
     }).catch((error) => {
       console.log('Error getting location', error);
@@ -72,8 +89,37 @@ export class CineProche {
         // Now you can use all methods safely.
 
 
+
       }
+
       );
+  }
+  getRestaurants(latLng: LatLng): Promise<Array<any>> {
+    var service = new google.maps.places.PlacesService(this.map);
+    let request = {
+      location: latLng,
+      radius: 8047,
+      types: ["restaurant"]
+    };
+    return new Promise((resolve, reject) => {
+      service.nearbySearch(request, function (results, status) {
+        if (status === google.maps.places.PlacesServiceStatus.OK) {
+          resolve(results);
+        } else {
+          reject(status);
+        }
+
+      });
+    });
 
   }
+
+  createMarker(place) {
+    let marker = new google.maps.Marker({
+      map: this.map,
+      animation: google.maps.Animation.DROP,
+      position: place.geometry.location
+    });
+  }
+
 }
