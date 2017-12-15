@@ -41,7 +41,7 @@ export class SocietyPage {
 
 
 
-  presentAlert(ok: boolean) {
+  presentAlert(ok: boolean): void {
 
     if (ok) {
       let alert = this.alertCtrl.create({

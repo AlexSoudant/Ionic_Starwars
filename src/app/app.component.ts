@@ -10,6 +10,7 @@ import { TheLastJediPage } from '../pages/the-last-jedi/the-last-jedi';
 import { MoviePage } from '../pages/movie/movie';
 import { MoviedetailsPage } from '../pages/moviedetails/moviedetails';
 import { CineProche } from '../pages/cineproche/cineproche';
+import { ItemDetailsPage } from '../pages/item-details/item-details';
 
 
 @Component({
@@ -32,6 +33,7 @@ export class MyApp {
       { title: 'Society', component: SocietyPage },
       { title: 'Movie', component: MoviePage },
       { title: 'Cinéma', component: CineProche },
+      { title: 'Details', component: ItemDetailsPage },
 
     ];
 

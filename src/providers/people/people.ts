@@ -12,6 +12,7 @@ export class PeopleProvider {
 
   private lastPeopleSearch: Search = null;
   private result: Search;
+  private allPeople: Array<any>;
 
   constructor(private Swapi: SwapiProvider) { }
 
