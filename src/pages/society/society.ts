@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AlertController } from 'ionic-angular';
-import { ContactForm } from '../../interfaces/contactForm.interface';
+// import { ContactForm } from '../../interfaces/contactForm.interface';
 
 import { FormProvider } from './../../providers/form/form';
 
@@ -19,10 +19,15 @@ import { FormProvider } from './../../providers/form/form';
 })
 export class SocietyPage {
 
-  private first_name: string;
-  private last_name: string;
-  private email: string;
-  private message: string;
+  public first_name: string;
+  public last_name: string;
+  public email: string;
+  public message: string;
+  errorMessage = "Error message!";
+  formSettings = {
+    theme: 'ios'
+  };
+
 
   constructor(public formProvider: FormProvider, public navCtrl: NavController, public navParams: NavParams, private alertCtrl: AlertController) {
   }
@@ -31,10 +36,6 @@ export class SocietyPage {
     console.log('ionViewDidLoad SocietyPage');
   }
 
-  errorMessage = "Error message!"
-  formSettings = {
-    theme: 'ios'
-  };
 
 
 
@@ -57,14 +58,19 @@ export class SocietyPage {
       });
       alert.present();
     }
-  };
+  }
 
-  sendMessage() {
-    
+  sendMessage(): void {
+
     console.log("sendMessage", this.first_name, this.last_name)
-    let message= {"first_name": this.first_name, "last_name": this.last_name, "email": this.email, "message": this.message}
-    this.formProvider.pushMessage(message)
+    let message = {
+      first_name: this.first_name,
+      last_name: this.last_name,
+      email: this.email,
+      message: this.message
+    }
+    this.formProvider.pushMessage(message);
     this.presentAlert()
-  };
+  }
 
 }
