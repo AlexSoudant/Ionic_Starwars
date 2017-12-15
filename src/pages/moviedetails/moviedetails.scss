@@ -20,6 +20,18 @@ page-moviedetails {
     color: #f4f4f4;
   }
 
+  .item-ios ion-avatar ion-img,
+  .item-ios ion-avatar img {
+    @include navbar-height-map($avatar-size);
+    width: auto;
+  }
+
+  .item-md ion-avatar ion-img,
+  .item-md ion-avatar img {
+    @include navbar-height-map($avatar-size);
+    width: auto;
+  }
+
   // @media screen and (min-width:359px) {
 
   //     .card-md {
