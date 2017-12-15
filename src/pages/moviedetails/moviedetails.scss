@@ -6,16 +6,19 @@ page-moviedetails {
   }
 
 
-    ion-card {
-      position: relative;
-      text-align: center;
-      border: thin solid #ebd800;
-    }
+  ion-card {
+    position: relative;
+    text-align: center;
+    border: thin solid #ebd800;
+  }
 
-    ion-card-title{
-      color : white
-    }
+  ion-card-title{
+    color : white
+  }
 
+  .details_text{
+    color: #f4f4f4;
+  }
 
   // @media screen and (min-width:359px) {
 
