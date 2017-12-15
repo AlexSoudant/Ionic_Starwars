@@ -4,6 +4,9 @@ page-home {
       @include font-size-map($paragraph-font-size);
   }
 
+  img {
+    align-items: center;
+  }
   p.home_name {
     color: #6f8faf;
   }
@@ -24,10 +27,7 @@ page-home {
     @include navbar-height-map($navbar-ios-height);
   }
 
-  #join-button{
-    @include button-height-map($button-height);
-  }
-  
+
   
 
   // ion-content {

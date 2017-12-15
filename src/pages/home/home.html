@@ -5,7 +5,7 @@
     </button>
     <img id="logo-navbar" src="assets/imgs/TITREblanc.png">
     <ion-buttons end>
-      <button ion-button id="join-button">
+      <button  ion-button [navPush]="societyPage" id="join-button">
         Want to join us ?
       </button>
     </ion-buttons>
@@ -16,16 +16,14 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col>
-        <img class="poster" width="100%" height="auto" object-fit: cover center src="assets/imgs/last_jedi_poster.jpeg">
+      <ion-col text-center>
+        <img class="poster" width="50%" height="auto" object-fit: cover center src="assets/imgs/last_jedi_poster.jpeg">
       </ion-col>
     </ion-row>
-  </ion-grid>
 
-  <ion-grid class="grid-header">
     <ion-row>
-      <ion-col>
-        <img class="logo" width="100%" height="auto" object-fit: cover center src="assets/imgs/last_jedi_logo.png">
+      <ion-col text-center>
+        <img class="logo" width="50%" height="auto" object-fit: cover center src="assets/imgs/last_jedi_logo.png">
       </ion-col>
     </ion-row>
 
@@ -40,19 +38,15 @@
       </ion-col>
     </ion-row>
 
-  </ion-grid>
-
-
-  <ion-grid class="grid-footer">
     <ion-row>
       <ion-col>
         <section>
           <h1 text-center class="home_h1">Did you knew it?</h1>
-          <!--<ion-spinner *ngIf="!(randomFacts | async)"></ion-spinner>-->
-          <!-- <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p> -->
+          <ion-spinner *ngIf="!(randomFacts | async)"></ion-spinner>
+          <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p>
           <ion-card>
             <ion-card-content>
-              <p class="home_p" text-center>{{randomFacts.text}}</p>
+              <p class="home_p" text-center>{{randomFact|async}}</p>
             </ion-card-content>
           </ion-card>
         </section>
@@ -63,7 +57,11 @@
       <ion-col>
         <section>
           <h1 text-center class="home_h1">News from the StarWars Family</h1>
-          <p text-center class="home_p">Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
+          <ion-card>
+              <ion-card-content>
+                  <p text-center class="home_p">Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
+              </ion-card-content>
+            </ion-card>
         </section>
       </ion-col>
     </ion-row>

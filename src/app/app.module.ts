@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { HttpClientModule } from '@angular/common/http';
+import { Http, Response } from '@angular/http';
 
 
 import { AngularFireModule } from 'angularfire2';
@@ -26,7 +27,9 @@ import { NewsProvider } from '../providers/news/news';
 import { SwapiProvider } from '../providers/swapi/swapi';
 import { FactsProvider } from '../providers/facts/facts';
 import { WordsProvider } from '../providers/words/words';
+import { FilmProvider } from '../providers/film/film';
 
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -45,7 +48,8 @@ import { WordsProvider } from '../providers/words/words';
     AngularFireModule.initializeApp(config.firebase),
     AngularFirestoreModule.enablePersistence(),
     IonicModule.forRoot(MyApp),
-    HttpClientModule
+    HttpClientModule,
+    HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -66,7 +70,8 @@ import { WordsProvider } from '../providers/words/words';
     NewsProvider,
     SwapiProvider,
     FactsProvider,
-    WordsProvider
+    WordsProvider,
+    FilmProvider,
   ]
 })
 export class AppModule { }
