@@ -61,3 +61,119 @@ body{
     src: url('../assets/fonts/Starjedi.TTF') format('truetype');
 }
 
+
+
+ion-card-content p.home_hook {
+    color: $SWOrange;
+  }
+  
+  h1.home_h1 {
+    color: $SWYellow;
+  }
+  
+  p.home_p {
+    color: #ddd;
+  }
+  
+  .card.card-ios {
+    background-color: rgba(44, 44, 44, 0.95);
+  }
+  .card.card-md {
+    background-color: rgba(44, 44, 44, 0.95);
+  }
+  
+  .card-actuality .card-header-ios{
+    @include font-size-map($cardtitle-font-size);
+  }
+  .card-actuality .card-content-ios p{
+    @include font-size-map($cardcontent-font-size);
+  }
+  
+  .card-actuality .card-header-md{
+    @include font-size-map($cardtitle-font-size);
+  }
+  .card-actuality .card-content-md p{
+    @include font-size-map($cardcontent-font-size);
+  }
+  
+  
+  .card-moviedetails .card-header{
+    @include font-size-map($cardtitle-font-size);
+  }
+  .card-moviedetails .card-content p{
+    @include font-size-map($cardcontent-font-size);
+  }
+  
+  
+  
+  .card-society .card-title-ios{
+    @include font-size-map($cardtitle-font-size);
+  }
+  
+  .card-society .card-title-md{
+    @include font-size-map($cardtitle-font-size);
+  }
+  
+  .card-society div h3{
+  
+    @include font-size-map($cardcontent-font-size);
+  }
+  
+  .card-society div p{
+    
+      @include font-size-map($cardcontent-font-size);
+  }
+  
+  #submitContact{
+    @include button-height-map($button-height);
+    // @include button-width-map($button-width);
+    .button-inner{
+      @include font-size-map($button-font-size);
+    }
+  
+  }
+  
+  
+  .card-header-md{
+    @include font-size-map($title-font-size);
+  }
+  
+  .item p.content_list{
+    @include font-size-map($paragraph-font-size);
+  }
+  
+  .toolbar{
+    @include button-height-map($navbar-ios-height);
+  }
+  
+  
+  #join-button{
+    @include button-height-map($button-height);
+    @include button-width-map($button-width);
+  
+    .button-inner{
+      @include font-size-map($button-font-size);
+    }
+  }
+  
+  ion-navbar .bar-button-ios {
+    @include font-size-map($togglemenu-font-size);
+  }
+  ion-navbar .bar-button-md {
+    @include font-size-map($togglemenu-font-size);
+  }
+  
+  ion-navbar #logo-navbar {
+    @include button-height-map($button-height);
+  }
+  
+  
+  ion-item-divider .label{
+    font-family: "episode-font";
+    @include font-size-map($cardcontent-font-size);
+  }
+  
+  ion-item .label p{
+    @include font-size-map($cardcontent-font-size);
+  }
+
