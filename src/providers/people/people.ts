@@ -10,15 +10,11 @@ import { Subject } from 'rxjs/';
 @Injectable()
 export class PeopleProvider {
 
-  private lastPeopleSearch: Search = null;
-  private result: Search;
   private peopleMap = {};
 
   constructor(private Swapi: SwapiProvider) { }
 
-  /*  history(): Search {
-     return this.lastPeopleSearch;
-   } */
+
 
 
 
@@ -55,29 +51,6 @@ export class PeopleProvider {
     return Observable.forkJoin(peoples);
   }
 
-  // getPeoplesByName(name: String, page: Number = undefined): Observable<any> {
-  //   if (name && name.length && name.length > 0 && (!page || page >= 0)) {
-  //     return this.Swapi.getPeoplesByName(name, page || undefined).map((resp: Object) => {
-  //       const res = this.objectToSearch(resp);
-  //       if (res) {
-  //         this.lastPeopleSearch = res;
-  //         return res;
-  //       } else {
-  //         return Observable.throw('unexpected Swapi response');
-  //       }
-  //     });
-  //   }
-  
-    // private objectToSearch(obj: Object): Search {
-    //   if (!obj['results'] || !obj['count'] || !obj['page']) {
-    //     return;
-    //   }
-  
-  
-    //   this.result.Peoples = obj['results'];
-    //   this.result.Pages = Math.ceil(Number(obj['count']) / Number(this.Swapi.getNbItemByPage()));
-    //   this.result.Page = obj['page'];
-    //   return this.result;
-    // } */
+
 
 }

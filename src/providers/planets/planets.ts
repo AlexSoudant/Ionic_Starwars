@@ -31,4 +31,10 @@ export class PlanetProvider {
     }
   }
 
+
+  getPlanetsById(ids: Array<string>): Observable<Array<Planet>> {
+    const planets: Array<Observable<Planet>> = ids.map(id => this.getPlanetById(id));
+    return Observable.forkJoin(planets);
+  }
+
 }

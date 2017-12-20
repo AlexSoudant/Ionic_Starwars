@@ -31,6 +31,8 @@ import { PeopleProvider } from '../providers/people/people';
 import { PlanetProvider } from '../providers/planets/planets';
 
 import { HttpModule } from '@angular/http';
+import { StarshipsProvider } from '../providers/starships/starships';
+import { VehiclesProvider } from '../providers/vehicles/vehicles';
 
 @NgModule({
   declarations: [
@@ -76,6 +78,8 @@ import { HttpModule } from '@angular/http';
     FormProvider,
     PeopleProvider,
     PlanetProvider,
+    StarshipsProvider,
+    VehiclesProvider,
   ]
 })
 export class AppModule { }

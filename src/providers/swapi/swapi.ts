@@ -105,7 +105,7 @@ export class SwapiProvider {
     }
   }
 
-  getVehiclesById(id: String): Observable<any> {
+  getVehicleById(id: String): Observable<any> {
     if (id) {
       return this.get('vehicles', id).map((resp: Object) => {
         resp = this.allUrlsToId(resp);
