@@ -5,7 +5,7 @@
     </button>
     <img id="logo-navbar" src="assets/imgs/TITREblanc.png">
     <ion-buttons end>
-      <button  ion-button [navPush]="societyPage" id="join-button">
+      <button ion-button [navPush]="societyPage" id="join-button">
         Want to join us ?
       </button>
     </ion-buttons>
@@ -17,7 +17,7 @@
   <ion-grid>
     <ion-row>
       <ion-col text-center>
-        <img class="poster" width="50%" height="auto" object-fit: cover center src="assets/imgs/last_jedi_poster.jpeg">
+        <img class="poster" width="100%" height="auto" object-fit: cover center src="assets/imgs/last_jedi.jpg">
       </ion-col>
     </ion-row>
 
@@ -30,10 +30,14 @@
     <ion-row>
       <ion-col>
         <section class="infoFilm">
-          <p text-center class="home_hook"> More than 5 million of theather views are expected. </p>
-          <p text-center class="home_hook"> Two Award nominations. </p>
-          <p text-center class="home_hook"> if The Last Jedi rise at the level of The Force Awakens it will raise $248 million on opening and $2 billion worldwide!
-          </p>
+          <ion-card>
+            <ion-card-content>
+              <p text-center class="home_hook"> More than 5 million of theather views are expected. </p>
+              <p text-center class="home_hook"> Two Award nominations. </p>
+              <p text-center class="home_hook"> if The Last Jedi rise at the level of The Force Awakens it will raise $248 million on opening and $2 billion worldwide!
+              </p>
+            </ion-card-content>
+          </ion-card>
         </section>
       </ion-col>
     </ion-row>
@@ -42,7 +46,7 @@
       <ion-col>
         <section>
           <h1 text-center class="home_h1">Did you knew it?</h1>
-          <ion-spinner *ngIf="!(randomFacts | async)"></ion-spinner>
+          <!-- <ion-spinner *ngIf="!(randomFacts | async)"></ion-spinner> -->
           <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p>
           <ion-card>
             <ion-card-content>
@@ -58,10 +62,10 @@
         <section>
           <h1 text-center class="home_h1">News from the StarWars Family</h1>
           <ion-card>
-              <ion-card-content>
-                  <p text-center class="home_p">Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
-              </ion-card-content>
-            </ion-card>
+            <ion-card-content>
+              <p text-center class="home_p">Your StarWars Family is alive! Join the wookie team and benefit huge advantages in coupons and more.</p>
+            </ion-card-content>
+          </ion-card>
         </section>
       </ion-col>
     </ion-row>
@@ -70,12 +74,12 @@
       <ion-col>
         <section>
           <h1 text-center class="home_h1">Words from StarWars Fans</h1>
-          <ion-spinner *ngIf="!(allWords | async)"></ion-spinner>
+          <!-- <ion-spinner *ngIf="!(word | async)"></ion-spinner> -->
           <!-- <p *ngFor="let facts of randomFacts | async" text-center class="home_p"></p> -->
-          <ion-card *ngFor="let words of allWords | async">
+          <ion-card>
             <ion-card-content>
-              <p class="home_p" text-center>{{words.text}}</p>
-              <p class="home_name" text-center>{{words.name}}</p>
+              <p class="home_p" text-center>{{word?.text}}</p>
+              <p class="home_name" text-center>{{word?.name}}</p>
             </ion-card-content>
           </ion-card>
         </section>

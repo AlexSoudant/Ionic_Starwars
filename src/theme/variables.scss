@@ -45,6 +45,7 @@ $colors: (
   $SWBlack:rgba(31, 31, 31, 0);
   $SWGrey:rgba(63, 63, 63,0.7);
   $SWGreyOpaque: rgba(63, 63, 63, 0.9);
+  $SWWhiteGrey: rgba(217,217,217,1);
   $SWYellow:#e2d002;
   $SWOrange:#e15021;
   $SWRed:#cc0000;
@@ -90,9 +91,12 @@ $colors: (
   $paragraph-font-size: (null: 40px, $lg: 40px, $md: 18px, $sm: 16px, $xs: 14px);
   $button-font-size: (null: 25px, $lg: 25px, $md: 18px, $sm: 14px, $xs: 14px);
   $togglemenu-font-size: (null: 40px, $lg: 25px, $md: 18px, $sm: 18px, $xs: 14px);
+  $slide-font-size: (null: 20px, $lg: 20px, $md: 15px, $sm: 12px, $xs: 10px);
 
   $navbar-ios-height:(null: 120px, $lg: 80px, $md: 60px, $sm: 60px, $xs: 40px);
   $navbar-md-height:(null: 120px, $lg: 80px, $md: 60px, $sm: 60px, $xs: 40px);
+
+  $avatar-size:(null: 68px, $lg: 68px, $md: 60px, $sm: 52px, $xs: 40px);
 
   @mixin navbar-height-map($navbar-height-map) {
     @each $breakpoint, $nav-bar-height in $navbar-height-map {
@@ -206,15 +210,26 @@ $card-md-box-shadow-color: rgba(167, 167, 14, 0.322);
 
 $toolbar-ios-title-text-color: $SWRed;
 
+$item-ios-divider-color: black;
+$item-md-divider-color: black;
+
+$item-ios-divider-background: $SWWhiteGrey;
+$item-md-divider-background: $SWWhiteGrey;
+
 @import "ionic.theme.default";
 
 
 
-p.home_hook {
+ion-card-content p.home_hook {
   color: $SWOrange;
+  margin: 0 0 10px 0;
 }
 
 h1.home_h1 {
+  color: $SWYellow;
+}
+
+h1.people_name{
   color: $SWYellow;
 }
 
@@ -223,10 +238,10 @@ p.home_p {
 }
 
 .card.card-ios {
-  background-color: rgba(63, 63, 63, 0.75);
+  background-color: rgba(44, 44, 44, 0.95);
 }
 .card.card-md {
-  background-color: rgba(63, 63, 63, 0.75);
+  background-color: rgba(44, 44, 44, 0.95);
 }
 
 .card-actuality .card-header-ios{
@@ -242,6 +257,16 @@ p.home_p {
 .card-actuality .card-content-md p{
   @include font-size-map($cardcontent-font-size);
 }
+
+
+.card-moviedetails .card-header{
+  @include font-size-map($cardtitle-font-size);
+}
+.card-moviedetails .card-content p{
+  @include font-size-map($cardcontent-font-size);
+}
+
+
 
 .card-society .card-title-ios{
   @include font-size-map($cardtitle-font-size);
@@ -284,7 +309,6 @@ p.home_p {
 }
 
 
-
 #join-button{
   @include button-height-map($button-height);
   @include button-width-map($button-width);
@@ -306,6 +330,14 @@ ion-navbar #logo-navbar {
 }
 
 
+ion-item-divider .label{
+  font-family: "episode-font";
+  @include font-size-map($cardcontent-font-size);
+}
+
+ion-item .label p{
+  @include font-size-map($cardcontent-font-size);
+}
 
 // Ionicons
 // --------------------------------------------------

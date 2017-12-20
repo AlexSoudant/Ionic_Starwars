@@ -10,11 +10,6 @@
 			<ion-icon name="menu"></ion-icon>
 		</button>
 		<img id="logo-navbar" src="assets/imgs/TITREblanc.png">
-		<ion-buttons end>
-			<button ion-button id="join-button">
-				Want to join us ?
-			</button>
-		</ion-buttons>
 	</ion-navbar>
 </ion-header>
 
@@ -81,19 +76,19 @@
 
 				<ion-list padding>
 					<ion-item>
-						<ion-textarea placeholder="Enter your name" class="input"></ion-textarea>
+						<ion-textarea [(ngModel)]="first_name" placeholder="Enter your name" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
-						<ion-textarea placeholder="Enter your firstname" class="input"></ion-textarea>
+						<ion-textarea [(ngModel)]="last_name" placeholder="Enter your firstname" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
-						<ion-textarea placeholder="Enter your email" class="input"></ion-textarea>
+						<ion-textarea [(ngModel)]="email" placeholder="Enter your email" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
-						<ion-textarea placeholder="Enter your message" class="input"></ion-textarea>
+						<ion-textarea [(ngModel)]="message" placeholder="Enter your message" class="input"></ion-textarea>
 					</ion-item>
 					<ion-item>
-						<button ion-button block (click)="presentAlert()">Send</button>
+						<button ion-button block (click)="sendMessage()">Send</button>
 					</ion-item>
 				</ion-list>
 			</div>

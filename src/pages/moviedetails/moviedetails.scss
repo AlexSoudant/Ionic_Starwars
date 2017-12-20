@@ -5,6 +5,10 @@ page-moviedetails {
     background-color: #488aff;
   }
 
+  .card-md h1 {
+    @include font-size-map($slide-font-size);
+  }
+
 
   ion-card {
     position: relative;
@@ -18,6 +22,18 @@ page-moviedetails {
 
   .details_text{
     color: #f4f4f4;
+  }
+
+  .item-ios ion-avatar ion-img,
+  .item-ios ion-avatar img {
+    @include navbar-height-map($avatar-size);
+    width: auto;
+  }
+
+  .item-md ion-avatar ion-img,
+  .item-md ion-avatar img {
+    @include navbar-height-map($avatar-size);
+    width: auto;
   }
 
   // @media screen and (min-width:359px) {
