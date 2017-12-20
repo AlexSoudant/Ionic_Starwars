@@ -6,9 +6,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 import { ActualityPage } from '../pages/actuality/actuality';
 import { SocietyPage } from '../pages/society/society';
-import { TheLastJediPage } from '../pages/the-last-jedi/the-last-jedi';
 import { MoviePage } from '../pages/movie/movie';
-import { MoviedetailsPage } from '../pages/moviedetails/moviedetails';
+// import { MoviedetailsPage } from '../pages/moviedetails/moviedetails';
 import { CineProche } from '../pages/cineproche/cineproche';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 

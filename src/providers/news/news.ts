@@ -12,8 +12,8 @@ import { News } from './../../interfaces/news.interface';
 export class NewsProvider {
 
   private NEWS_DB_PATH: string = "news";
-  private itemsCollection: AngularFirestoreCollection<News>;
-  private items: Observable<News[]>;
+  // private itemsCollection: AngularFirestoreCollection<News>;
+  // private items: Observable<News[]>;
   private db: AngularFirestore;
 
   constructor(db: AngularFirestore) {

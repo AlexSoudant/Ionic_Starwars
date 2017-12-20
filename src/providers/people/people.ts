@@ -3,7 +3,7 @@ import 'rxjs/';
 import { Observable } from 'rxjs/Observable';
 import { People } from './../../interfaces/people.interface';
 import { SwapiProvider } from '../swapi/swapi';
-import { Subject } from 'rxjs/';
+// import { Subject } from 'rxjs/';
 
 
 @Injectable()

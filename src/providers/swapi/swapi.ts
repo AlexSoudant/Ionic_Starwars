@@ -3,9 +3,7 @@ import { Injectable, Inject } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/';
 import { Http, Response } from '@angular/http';
-import { Film } from './../../interfaces/film.interface';
 
-import { Planet } from './../../interfaces/planet.interface';
 
 @Injectable()
 export class SwapiProvider {
