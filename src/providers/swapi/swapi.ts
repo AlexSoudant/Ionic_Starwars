@@ -67,7 +67,7 @@ export class SwapiProvider {
     }
   }
 
-  getPeopleById(id: String): Observable<Object> {
+  getPeopleById(id: String): Observable<any> {
     if (id) {
       return this.get('people', id).map((resp: Object) => {
         resp = this.allUrlsToId(resp);
@@ -79,7 +79,7 @@ export class SwapiProvider {
     }
   }
 
-  getPeoples(page: Number = null): Observable<Object> {
+  getPeoples(page: Number = null): Observable<any> {
     return this.get('people', null, (page && page.valueOf() >= 1) ? 'page=' + page : null).map((resp: Object) => {
       if (resp) {
         resp['page'] = this.getPage(resp);
