@@ -3,7 +3,6 @@ import 'rxjs/';
 import { Observable } from 'rxjs/Observable';
 import { People } from './../../interfaces/people.interface';
 import { SwapiProvider } from '../swapi/swapi';
-import { Search } from './../../interfaces/search.interface';
 import { Subject } from 'rxjs/';
 
 
