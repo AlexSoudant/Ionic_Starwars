@@ -36,7 +36,7 @@ export class PeopleProvider {
     // }
   }
 
-  getPeoplesByName(name: String, page: Number = undefined): Observable<PeopleSearch> {
+  getPeoplesByName(name: String, page: Number = undefined): Observable<any> {
     if (name && name.length && name.length > 0 && (!page || page >= 0)) {
       return this.Swapi.getPeoplesByName(name, page || undefined).map((resp: Object) => {
         const res = this.objectToSearch(resp);

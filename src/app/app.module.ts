@@ -28,6 +28,7 @@ import { WordsProvider } from '../providers/words/words';
 import { FilmProvider } from '../providers/film/film';
 import { FormProvider } from '../providers/form/form';
 import { PeopleProvider } from '../providers/people/people';
+import { PlanetProvider } from '../providers/planets/planets';
 
 import { HttpModule } from '@angular/http';
 
@@ -74,6 +75,7 @@ import { HttpModule } from '@angular/http';
     FilmProvider,
     FormProvider,
     PeopleProvider,
+    PlanetProvider,
   ]
 })
 export class AppModule { }

@@ -5,6 +5,10 @@ page-moviedetails {
     background-color: #488aff;
   }
 
+  .card-md h1 {
+    @include font-size-map($slide-font-size);
+  }
+
 
   ion-card {
     position: relative;

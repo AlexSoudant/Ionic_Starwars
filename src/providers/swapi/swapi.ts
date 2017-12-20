@@ -5,6 +5,8 @@ import 'rxjs/';
 import { Http, Response } from '@angular/http';
 import { Film } from './../../interfaces/film.interface';
 
+import { Planet } from './../../interfaces/planet.interface';
+
 @Injectable()
 export class SwapiProvider {
 
@@ -79,6 +81,42 @@ export class SwapiProvider {
     }
   }
 
+  getPlanetById(id: String): Observable<any> {
+    if (id) {
+      return this.get('planets', id).map((resp: Object) => {
+        resp = this.allUrlsToId(resp);
+        resp['id'] = resp['url'];
+        return resp;
+      });
+    } else {
+      return Observable.throw('param ID is undefined');
+    }
+  }
+
+  getStarshipById(id: String): Observable<any> {
+    if (id) {
+      return this.get('starships', id).map((resp: Object) => {
+        resp = this.allUrlsToId(resp);
+        resp['id'] = resp['url'];
+        return resp;
+      });
+    } else {
+      return Observable.throw('param ID is undefined');
+    }
+  }
+
+  getVehiclesById(id: String): Observable<any> {
+    if (id) {
+      return this.get('vehicles', id).map((resp: Object) => {
+        resp = this.allUrlsToId(resp);
+        resp['id'] = resp['url'];
+        return resp;
+      });
+    } else {
+      return Observable.throw('param ID is undefined');
+    }
+  }
+
   getPeoples(page: Number = null): Observable<Object> {
     return this.get('people', null, (page && page.valueOf() >= 1) ? 'page=' + page : null).map((resp: Object) => {
       if (resp) {
@@ -94,6 +132,8 @@ export class SwapiProvider {
       }
     });
   }
+
+
 
   getFilmById(id: String): Observable<any> {
     if (id) {
