@@ -18,17 +18,17 @@ export class StarshipsProvider {
 
   constructor(private Swapi: SwapiProvider) { }
 
-  getStarshipById(id: string): Observable<Starship> {
-    if (this.starshipsMap[id]) {
+  getStarshipById(id: String): Observable<Starship> {
+    if (this.starshipsMap[id.toString()]) {
       return new Observable(observer => {
-        observer.next(this.starshipsMap[id]);
+        observer.next(this.starshipsMap[id.toString()]);
         observer.complete();
       })
     } else {
       let resObs = this.Swapi.getStarshipById(id);
 
       return resObs.map(starship => {
-        this.starshipsMap[id] = starship;
+        this.starshipsMap[id.toString()] = starship;
         return starship;
       });
 
@@ -37,7 +37,7 @@ export class StarshipsProvider {
   }
 
 
-  getStarshipsById(ids: Array<string>): Observable<Array<Starship>> {
+  getStarshipsById(ids: Array<String>): Observable<Array<Starship>> {
     const starships: Array<Observable<Starship>> = ids.map(id => this.getStarshipById(id));
     return Observable.forkJoin(starships);
   }

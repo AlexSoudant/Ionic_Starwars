@@ -6,6 +6,12 @@ import { People } from '../../interfaces/people.interface';
 import { PeopleProvider } from '../../providers/people/people';
 import { Planet } from '../../interfaces/planet.interface';
 import { PlanetProvider } from '../../providers/planets/planets';
+import { Starship } from '../../interfaces/starship.interface';
+import { StarshipsProvider } from '../../providers/starships/starships';
+import { Vehicle } from '../../interfaces/vehicle.interface';
+import { VehiclesProvider } from '../../providers/vehicles/vehicles';
+
+import { Observable } from 'rxjs/Observable';
 
 /**
  * Generated class for the MoviedetailsPage page.
@@ -23,17 +29,20 @@ export class MoviedetailsPage {
 
   private filmId: string;
   public film: Film;
-  public peoples: People[]= [];
-  public planet: Planet;
-  public planets: Planet[]= [];
+  public peoples: Observable<People[]>;
+  public planets: Observable<Planet[]>;
+  public starships: Observable<Starship[]>;
+  public vehicles: Observable<Vehicle[]>;
 
 
-  constructor(public navCtrl: NavController, 
-      public navParams: NavParams, 
-      public filmProvider: FilmProvider, 
-      public peopleProvider: PeopleProvider,
-      public planetProvider: PlanetProvider
-    ) {
+  constructor(public navCtrl: NavController,
+    public navParams: NavParams,
+    public filmProvider: FilmProvider,
+    public peopleProvider: PeopleProvider,
+    public planetProvider: PlanetProvider,
+    public starshipsProvider: StarshipsProvider,
+    public vehiclesProvider: VehiclesProvider
+  ) {
     this.filmId = navParams.get("filmId");
   }
 
@@ -48,8 +57,11 @@ export class MoviedetailsPage {
       ((res) => {
         this.film = res;
         console.log(this.film);
-        this.findAllPeople(this.film)
-        this.findAllPlanets(this.film)
+        this.peoples = this.peopleProvider.getPeoplesById(this.film.characters);
+        this.planets = this.planetProvider.getPlanetsById(this.film.planets);
+        this.starships = this.starshipsProvider.getStarshipsById(this.film.starships);
+        this.vehicles = this.vehiclesProvider.getVehiclesById(this.film.vehicles);
+
       }),
       ((error) => {
         console.log(error);
@@ -58,44 +70,9 @@ export class MoviedetailsPage {
         console.log('FIN');
       }
     );
-   
+
 
   }
-
-  findAllPeople(film){
-    film.characters.map(id => {
-
-      console.log('character id to look for', id)
-
-      return this.peopleProvider.getPeopleById(id).subscribe(
-        ((result) => {
-          this.peoples.push(result);
-          console.log('all characters',this.peoples)
-        }),
-        ((error) => {
-          console.log(error);
-        }),
-      );
-    })
-  }
-
-  findAllPlanets(film){
-    film.planets.map(id => {
-
-      console.log('character id to look for', id)
-
-      return this.planetProvider.getPlanetById(id).subscribe(
-        ((result) => {
-          this.planets.push(result);
-          console.log('all planets',this.planets)
-        }),
-        ((error) => {
-          console.log(error);
-        }),
-      );
-    })
-  }
-
 
 
 }

@@ -19,17 +19,17 @@ export class VehiclesProvider {
 
   constructor(private Swapi: SwapiProvider) { }
 
-  getVehicleById(id: string): Observable<Vehicle> {
-    if (this.vehiclesMap[id]) {
+  getVehicleById(id: String): Observable<Vehicle> {
+    if (this.vehiclesMap[id.toString()]) {
       return new Observable(observer => {
-        observer.next(this.vehiclesMap[id]);
+        observer.next(this.vehiclesMap[id.toString()]);
         observer.complete();
       })
     } else {
       let resObs = this.Swapi.getVehicleById(id);
 
       return resObs.map(vehicle => {
-        this.vehiclesMap[id] = vehicle;
+        this.vehiclesMap[id.toString()] = vehicle;
         return vehicle;
       });
 
@@ -38,7 +38,7 @@ export class VehiclesProvider {
   }
 
 
-  getStarshipsById(ids: Array<string>): Observable<Array<Vehicle>> {
+  getVehiclesById(ids: Array<String>): Observable<Array<Vehicle>> {
     const vehicles: Array<Observable<Vehicle>> = ids.map(id => this.getVehicleById(id));
     return Observable.forkJoin(vehicles);
   }

@@ -17,10 +17,10 @@ export class PeopleProvider {
 
 
 
-  getPeopleById(id: string): Observable<People> {
-    if (this.peopleMap[id]) {
+  getPeopleById(id: String): Observable<People> {
+    if (this.peopleMap[id.toString()]) {
       return new Observable(observer => {
-        observer.next(this.peopleMap[id]);
+        observer.next(this.peopleMap[id.toString()]);
         observer.complete();
       })
     } else {
@@ -37,7 +37,7 @@ export class PeopleProvider {
       //   }
       // );
       return resObs.map(people => {
-        this.peopleMap[id] = people;
+        this.peopleMap[id.toString()] = people;
         return people;
       });
 
@@ -45,7 +45,7 @@ export class PeopleProvider {
     }
   }
 
-  getPeoplesById(ids: Array<string>): Observable<Array<People>> {
+  getPeoplesById(ids: Array<String>): Observable<Array<People>> {
     const peoples: Array<Observable<People>> = ids.map(id => this.getPeopleById(id));
     return Observable.forkJoin(peoples);
   }

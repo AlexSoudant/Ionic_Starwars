@@ -13,17 +13,17 @@ export class PlanetProvider {
 
   constructor(private Swapi: SwapiProvider) { }
 
-  getPlanetById(id: string): Observable<Planet> {
-    if (this.planetsMap[id]) {
+  getPlanetById(id: String): Observable<Planet> {
+    if (this.planetsMap[id.toString()]) {
       return new Observable(observer => {
-        observer.next(this.planetsMap[id]);
+        observer.next(this.planetsMap[id.toString()]);
         observer.complete();
       })
     } else {
       let resObs = this.Swapi.getPlanetById(id);
 
       return resObs.map(planet => {
-        this.planetsMap[id] = planet;
+        this.planetsMap[id.toString()] = planet;
         return planet;
       });
 
@@ -32,7 +32,7 @@ export class PlanetProvider {
   }
 
 
-  getPlanetsById(ids: Array<string>): Observable<Array<Planet>> {
+  getPlanetsById(ids: Array<String>): Observable<Array<Planet>> {
     const planets: Array<Observable<Planet>> = ids.map(id => this.getPlanetById(id));
     return Observable.forkJoin(planets);
   }
