@@ -29,22 +29,23 @@
 <ion-content>
 
   <ion-card class="card-moviedetails">
-    <img src="assets/imgs/personnages/{{people?.name.replace(' ','_').replace(' ','_')}}.jpg" />
+    <img src="assets/imgs/{{itemToDisplay.path}}/{{itemToDisplay.img}}" />
     <ion-card-content>
       <ion-card-header text-uppercase>
-        Name {{film?.episode_id}} :
-        <br/> {{film?.title}}
+        {{itemToDisplay.name}}
       </ion-card-header>
 
       <ion-grid>
         <ion-row>
           <ion-col>
-            <p>Gender :
-              <br/> {{people?.gender}}</p>
+            <p>
+              {{itemToDisplay.prop1_name}} :
+              <br/> {{itemToDisplay.prop1}}</p>
           </ion-col>
           <ion-col>
-            <p>Birth year:
-              <br/> {{people?.birth_year}}</p>
+            <p>
+              {{itemToDisplay.prop2_name}}:
+              <br/> {{itemToDisplay.prop2}}</p>
           </ion-col>
         </ion-row>
       </ion-grid>
@@ -53,12 +54,13 @@
 
     </ion-card-content>
 
+
     <ion-item-group>
       <ion-item-divider>Films</ion-item-divider>
       <ion-slides *ngIf="films" effect="" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
         <ion-slide *ngFor="let film of films | async">
           <ion-card>
-            <img src="assets/imgs/EPISODE{{film.episode_id}}_full.jpg" />
+            <img src="assets/imgs/EPISODE{{film.episode_id}}_full.jpg" (click)="goToDetailsPage(film.url)"/>
           </ion-card>
 
         </ion-slide>
@@ -67,7 +69,17 @@
 
 
 
+    <ion-item-group>
+      <ion-item-divider>people</ion-item-divider>
+      <ion-slides *ngIf="peoples" effect="" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
+        <ion-slide *ngFor="let people of peoples | async">
+          <ion-card>
+            <img src="assets/imgs/personnages/{{people.img}}" />
+          </ion-card>
 
+        </ion-slide>
+      </ion-slides>
+    </ion-item-group>
 
 
 

@@ -86,9 +86,10 @@ export class MoviedetailsPage {
   }
 
 
-  goToItemDetailsPage(id: string) {
+  goToItemDetailsPage(id: string, type: string) {
     this.navCtrl.push(ItemDetailsPage, {
-      peopleId: id
+      itemId: id,
+      itemType: type
     });
   }
 
