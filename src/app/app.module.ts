@@ -34,6 +34,7 @@ import { PlanetProvider } from '../providers/planets/planets';
 import { HttpModule } from '@angular/http';
 import { StarshipsProvider } from '../providers/starships/starships';
 import { VehiclesProvider } from '../providers/vehicles/vehicles';
+import { NearbysearchProvider } from '../providers/nearbysearch/nearbysearch';
 
 @NgModule({
   declarations: [
@@ -83,6 +84,7 @@ import { VehiclesProvider } from '../providers/vehicles/vehicles';
     PlanetProvider,
     StarshipsProvider,
     VehiclesProvider,
+    NearbysearchProvider,
   ]
 })
 export class AppModule { }
