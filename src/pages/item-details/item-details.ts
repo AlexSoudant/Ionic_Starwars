@@ -44,6 +44,7 @@ export class ItemDetailsPage {
   public films: Observable<Film[]>;
 
   private itemToDisplay: Object = {};
+  private type
 
 
   constructor(public navCtrl: NavController,
@@ -88,6 +89,8 @@ export class ItemDetailsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemDetailsPage');
+
+    this.type = this.navParams.get("itemType");
 
     if (this.navParams.get("itemType") == 'people') {
       this.peopleProvider.getPeopleById(this.peopleId).subscribe(

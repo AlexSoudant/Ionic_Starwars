@@ -9,9 +9,24 @@ page-item-details {
       // }
     }
 
+    .card-moviedetails .card-content p {
+      @include font-size-map($title-font-size);
+    }
 
 
+    .slide-zoom {
+      text-align: center;
+      display: block;
+      width: 110px;
+    }
+  
 
+    .swiper-slide img {
+      width: 85px;
+      max-width: 85px;
+      height: 100px;
+      max-height: 100px;
+    }
 
 
   // @media screen and (min-width:359px) {

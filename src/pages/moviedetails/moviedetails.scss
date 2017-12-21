@@ -8,6 +8,10 @@ page-moviedetails {
   .card-md h1 {
     @include font-size-map($slide-font-size);
   }
+  .card-ios h1 {
+    @include font-size-map($slide-font-size);
+  }
+
 
 
   ion-card {
