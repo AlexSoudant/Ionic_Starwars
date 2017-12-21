@@ -58,6 +58,7 @@ export class MoviedetailsPage {
         this.film = res;
         console.log(this.film);
         this.peoples = this.peopleProvider.getPeoplesById(this.film.characters);
+        // .map(people => this.addImg(people));
         this.planets = this.planetProvider.getPlanetsById(this.film.planets);
         this.starships = this.starshipsProvider.getStarshipsById(this.film.starships);
         this.vehicles = this.vehiclesProvider.getVehiclesById(this.film.vehicles);
@@ -73,6 +74,11 @@ export class MoviedetailsPage {
 
 
   }
+
+  // addImg(element: any): any {
+  //   element.img = 
+  //   return element
+  // }
 
 
 }
