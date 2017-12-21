@@ -1,4 +1,4 @@
-import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { Facts } from './../../interfaces/facts.interface';
 import { Injectable } from '@angular/core';

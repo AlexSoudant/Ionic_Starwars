@@ -1,4 +1,4 @@
-import { AngularFirestoreCollection, AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
+import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
 import { Observable } from 'rxjs/Observable';
 import { Injectable } from '@angular/core';
 import { ContactForm } from '../../interfaces/contactForm.interface';
@@ -14,7 +14,7 @@ export class FormProvider {
 
   private FORM_DB_PATH: string = "contactForm";
   private itemsCollection: AngularFirestoreCollection<ContactForm>;
-  private items: Observable<ContactForm[]>;
+  // private items: Observable<ContactForm[]>;
   private db: AngularFirestore;
 
 

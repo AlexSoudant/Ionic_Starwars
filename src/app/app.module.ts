@@ -29,8 +29,11 @@ import { WordsProvider } from '../providers/words/words';
 import { FilmProvider } from '../providers/film/film';
 import { FormProvider } from '../providers/form/form';
 import { PeopleProvider } from '../providers/people/people';
+import { PlanetProvider } from '../providers/planets/planets';
 
 import { HttpModule } from '@angular/http';
+import { StarshipsProvider } from '../providers/starships/starships';
+import { VehiclesProvider } from '../providers/vehicles/vehicles';
 
 @NgModule({
   declarations: [
@@ -77,6 +80,9 @@ import { HttpModule } from '@angular/http';
     FilmProvider,
     FormProvider,
     PeopleProvider,
+    PlanetProvider,
+    StarshipsProvider,
+    VehiclesProvider,
   ]
 })
 export class AppModule { }

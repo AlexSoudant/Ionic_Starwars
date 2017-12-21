@@ -1,0 +1,20 @@
+export interface Starship {
+    name: String,
+    model: String,
+    manufacturer: String,
+    cost_in_credits: Number,
+    length: Number,
+    max_atmosphering_speed: Number,
+    crew: Number,
+    passengers: Number,
+    cargo_capacity: Number,
+    consumables: String,
+    hyperdrive_rating: Number,
+    MGLT: Number,
+    starship_class: String,
+    pilots: Array<String>,
+    films: Array<String>,
+    created: Date,
+    edited: Date,
+    url: String
+}

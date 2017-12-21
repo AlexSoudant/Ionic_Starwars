@@ -1,5 +1,15 @@
 page-moviedetails {
 
+  ion-item-divider {
+    color : #488aff;
+    background-color: #488aff;
+  }
+
+  .card-md h1 {
+    @include font-size-map($slide-font-size);
+  }
+
+
   ion-card {
     position: relative;
     text-align: center;

@@ -40,9 +40,9 @@ export class FilmProvider {
     }
   }
 
-  // getFilmsById(ids: Array<string>): Observable<Array<Film>> {
-  //   const films: Array<Observable<Film>> = ids.map(id => this.getFilmById(id));
-  //   return Observable.forkJoin(films);
-  // }
+  getFilmsById(ids: Array<string>): Observable<Array<Film>> {
+    const films: Array<Observable<Film>> = ids.map(id => this.getFilmById(id));
+    return Observable.forkJoin(films);
+  }
 
 }
