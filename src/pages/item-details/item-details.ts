@@ -95,7 +95,8 @@ export class ItemDetailsPage {
 
           this.people = res;
           console.log(this.people);
-          this.peoples = this.peopleProvider.getPeoplesById(this.people.species);
+          this.peoples = this.peopleProvider.getPeoplesById(this.people.species)
+          .map(peoples => peoples.map(people => this.addImg(people)));
           this.films = this.filmProvider.getFilmsById(this.people.films);
 
           this.itemToDisplay['name'] = this.people.name;
@@ -124,6 +125,7 @@ export class ItemDetailsPage {
           this.planet = res;
           console.log(this.planet);
           this.peoples = this.peopleProvider.getPeoplesById(this.planet.residents)
+          .map(peoples => peoples.map(people => this.addImg(people)));
 
           this.films = this.filmProvider.getFilmsById(this.planet.films);
 
@@ -153,7 +155,8 @@ export class ItemDetailsPage {
 
           this.starship = res;
           console.log(this.people);
-          this.peoples = this.peopleProvider.getPeoplesById(this.starship.pilots);
+          this.peoples = this.peopleProvider.getPeoplesById(this.starship.pilots)
+          .map(peoples => peoples.map(people => this.addImg(people)));
           this.films = this.filmProvider.getFilmsById(this.starship.films);
 
           this.itemToDisplay['name'] = this.starship.name;
@@ -181,7 +184,8 @@ export class ItemDetailsPage {
 
           this.vehicle = res;
           console.log(this.people);
-          this.peoples = this.peopleProvider.getPeoplesById(this.vehicle.pilots);
+          this.peoples = this.peopleProvider.getPeoplesById(this.vehicle.pilots)
+          .map(peoples => peoples.map(people => this.addImg(people)));
           this.films = this.filmProvider.getFilmsById(this.vehicle.films);
 
           this.itemToDisplay['name'] = this.vehicle.name;
