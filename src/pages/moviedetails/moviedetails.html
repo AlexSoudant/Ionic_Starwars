@@ -75,7 +75,7 @@
       <ion-slides *ngIf="peoples" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
         <ion-slide *ngFor="let people of peoples | async">
           <ion-card class="character_card" (click)="goToDetailsPage('4')">
-            <img src="assets/imgs/personnages/{{people.name.replace(' ','_').replace(' ','_')}}.jpg" (click)="goToDetailsPage('4')" />
+            <img src="assets/imgs/personnages/{{people.name.replace(/ /g,'_')}}.jpg" (click)="goToDetailsPage('4')" />
           </ion-card>
           <h1 class="people_name">{{people.name}}</h1>
         </ion-slide>
@@ -89,7 +89,7 @@
       <ion-slides *ngIf="planets" effect="" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
         <ion-slide *ngFor="let planet of planets | async">
           <ion-card>
-            <img src="assets/imgs/planetes/{{planet.name.replace(' ','_').replace(' ','_')}}.jpg" (click)="goToDetailsPage('4')" />
+            <img src="assets/imgs/planetes/{{planet.name.replace(/ /g,'_')}}.jpg" (click)="goToDetailsPage('4')" />
           </ion-card>
           <h1 class="people_name">{{planet.name}}</h1>
         </ion-slide>
@@ -100,8 +100,8 @@
       <ion-item-divider>Starships</ion-item-divider>
       <ion-slides *ngIf="starships" effect="" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
         <ion-slide *ngFor="let starship of starships | async">
-          <ion-card class="starship_card">
-            <img src="assets/imgs/starship/{{starship.name.replace(' ','_').replace(' ','_')}}.jpg" (click)="goToDetailsPage('4')" />
+          <ion-card>
+            <img src="assets/imgs/starship/{{starship.name.replace(/ /g,'_')}}.jpg" (click)="goToDetailsPage('4')" />
           </ion-card>
           <h1 class="details_text">{{starship.name}}</h1>
         </ion-slide>
@@ -112,8 +112,8 @@
       <ion-item-divider>vehicles</ion-item-divider>
       <ion-slides *ngIf="vehicles" effect="" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
         <ion-slide *ngFor="let vehicle of vehicles | async">
-          <ion-card class="vehicle_card">
-            <img src="assets/imgs/vehicules/{{vehicle.name.replace(' ','_').replace(' ','_')}}.jpg" (click)="goToDetailsPage('4')" />
+          <ion-card>
+            <img src="assets/imgs/vehicules/{{vehicle.name.replace(/ /g,'_')}}.jpg" (click)="goToDetailsPage('4')" />
           </ion-card>
           <h1 class="details_text">{{vehicle.name}}</h1>
         </ion-slide>
