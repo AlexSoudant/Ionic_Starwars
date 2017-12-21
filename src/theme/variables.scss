@@ -39,7 +39,8 @@ $colors: (
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  greyopaque: rgba(0, 0, 0, 0)
+  greyopaque: rgba(0, 0, 0, 0),
+  blackgrey: rgba(31, 31, 31, 0),
   );
 
   $SWBlack:rgba(31, 31, 31, 0);
@@ -212,8 +213,8 @@ $toolbar-ios-title-text-color: $SWRed;
 $item-ios-divider-color: black;
 $item-md-divider-color: black;
 
-$item-ios-divider-background: $SWWhiteGrey;
-$item-md-divider-background: $SWWhiteGrey;
+$item-ios-divider-background: $SWGreyOpaque;
+$item-md-divider-background: $SWGreyOpaque;
 
 @import "ionic.theme.default";
 
@@ -325,7 +326,9 @@ ion-navbar #logo-navbar {
 
 
 ion-item-divider .label{
-  font-family: "episode-font";
+  font-family: "jedi-font";
+  color: $SWYellow;
+  font-size: 125%;
   @include font-size-map($cardcontent-font-size);
 }
 
@@ -346,3 +349,10 @@ ion-item .label p{
 
 @import "roboto";
 @import "noto-sans";
+
+@font-face {
+  font-family: "jedi-font";
+  font-style: normal;
+  font-weight: 400;
+  src: url('../assets/fonts/Starjhol.TTF') format('truetype');
+}

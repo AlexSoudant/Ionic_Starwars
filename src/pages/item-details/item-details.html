@@ -26,61 +26,82 @@
 </ion-content> -->
 
 
-<ion-content class="card-background-page">
-
-  <ion-slides effect="coverflow" spaceBetween="-40" slidesPerView="1.2" centeredSlides="true" pager="true">
-    <ion-slide>
-      <ion-card>
-        <img src="assets/imgs/EPISODE1_full.jpg" (click)="goToDetailsPage('4')" />
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card>
-        <img src="assets/imgs/EPISODE2_full.jpg" (click)="goToDetailsPage('5')" />
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card>
-        <img src="assets/imgs/EPISODE3_full.jpg" (click)="goToDetailsPage('6')" />
-      </ion-card>
-    </ion-slide>
-
-    <ion-slide>
-      <ion-card>
-        <img src="assets/imgs/EPISODE4_full.jpg" (click)="goToDetailsPage('1')" />
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card>
-        <img src="assets/imgs/EPISODE5_full.jpg" (click)="goToDetailsPage('2')" />
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card>
-        <img src="assets/imgs/EPISODE6_full.jpg" (click)="goToDetailsPage('3')" />
-      </ion-card>
-    </ion-slide>
-    <ion-slide>
-      <ion-card>
-        <img src="assets/imgs/EPISODE7_full.jpg" (click)="goToDetailsPage('7')" />
-      </ion-card>
-
-    </ion-slide>
-
-  </ion-slides>
-
-
-
-
-
-
-  <!--
-
-
-
-
-   -->
-
-</ion-content>
+<ion-content>
+  
+    <ion-card class="card-moviedetails">
+      <img src="assets/imgs/EPISODE{{film?.episode_id}}.png" />
+      <ion-card-content>
+        <ion-card-header text-uppercase>
+          EPISODE {{film?.episode_id}} :
+          <br/>
+          {{film?.title}}
+        </ion-card-header>
+  
+        <ion-grid>
+          <ion-row>
+            <ion-col>
+              <p>Director :<br/> {{film?.director}}</p>
+            </ion-col>
+            <ion-col>
+              <p>Release Date:<br/> {{film?.release_date}}</p>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+  
+        <p class="opening_crawl">
+          {{film?.opening_crawl}}
+        </p>
+  
+      </ion-card-content>
+  
+      <ion-item-group>
+        <ion-item-divider>characters</ion-item-divider>
+        <ion-item>
+          <ion-avatar item-end>
+            <img src="assets/imgs/Luke_Skywalker.jpg">
+          </ion-avatar>
+          <p class="details_text">Luke Skywalker</p>
+        </ion-item>
+  
+        <ion-item>
+          <ion-avatar item-end>
+            <img src="assets/imgs/Leia_Organa.jpg">
+          </ion-avatar>
+          <p class="details_text">Leia Organa</p>
+        </ion-item>
+      </ion-item-group>
+  
+  
+      <ion-item-group>
+        <ion-item-divider>planets</ion-item-divider>
+        <ion-item>
+          <p class="details_text">Tatooine</p>
+        </ion-item>
+        <ion-item>
+          <p class="details_text">Yavin IV</p>
+        </ion-item>
+      </ion-item-group>
+  
+      <ion-item-group>
+        <ion-item-divider>starships</ion-item-divider>
+        <ion-item>
+          <p class="details_text">CR90 corvette</p>
+        </ion-item>
+        <ion-item>
+          <p class="details_text">Star Destroyer</p>
+        </ion-item>
+      </ion-item-group>
+  
+      <ion-item-group>
+        <ion-item-divider>vehicles</ion-item-divider>
+        <ion-item>
+          <p class="details_text">Sand Crawler</p>
+        </ion-item>
+        <ion-item>
+          <p class="details_text">T-16 skyhopper</p>
+        </ion-item>
+      </ion-item-group>
+  
+    </ion-card>
+  
+  </ion-content>
