@@ -92,11 +92,7 @@ export class MoviedetailsPage {
     });
   }
 
-  addImg(element: any): any {
-    element.img = element.name.replace(/ /g, '_') + ".jpg"
-    return element
 
-  }
 
 
 }
