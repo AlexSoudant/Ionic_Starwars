@@ -57,11 +57,14 @@ export class MoviedetailsPage {
       ((res) => {
         this.film = res;
         console.log(this.film);
-        this.peoples = this.peopleProvider.getPeoplesById(this.film.characters);
-        // .map(people => this.addImg(people));
-        this.planets = this.planetProvider.getPlanetsById(this.film.planets);
-        this.starships = this.starshipsProvider.getStarshipsById(this.film.starships);
-        this.vehicles = this.vehiclesProvider.getVehiclesById(this.film.vehicles);
+        this.peoples = this.peopleProvider.getPeoplesById(this.film.characters)
+        .map(peoples => peoples.map(people=>this.addImg(people)));
+        this.planets = this.planetProvider.getPlanetsById(this.film.planets)
+        .map(planets => planets.map(planet=>this.addImg(planet)));
+        this.starships = this.starshipsProvider.getStarshipsById(this.film.starships)
+        .map(starships => starships.map(starship=>this.addImg(starship)));
+        this.vehicles = this.vehiclesProvider.getVehiclesById(this.film.vehicles)
+        .map(vehicles => vehicles.map(vehicle=>this.addImg(vehicle)));
 
       }),
       ((error) => {
@@ -75,10 +78,11 @@ export class MoviedetailsPage {
 
   }
 
-  // addImg(element: any): any {
-  //   element.img = 
-  //   return element
-  // }
+  addImg(element: any): any {
+    element.img = element.name.replace(/ /g,'_') + ".jpg"
+    return element
+    
+  }
 
 
 }
