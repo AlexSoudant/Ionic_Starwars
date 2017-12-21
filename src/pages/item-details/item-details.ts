@@ -46,7 +46,8 @@ export class ItemDetailsPage {
     public starshipsProvider: StarshipsProvider,
     public vehiclesProvider: VehiclesProvider
   ) {
-    this.peopleId = navParams.get("peopleId");
+    if (navParams.get("itemType") == 'people' )
+      this.peopleId = navParams.get("itemId");
   }
 
 
@@ -63,23 +64,28 @@ export class ItemDetailsPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ItemDetailsPage');
-    this.peopleProvider.getPeopleById(this.peopleId).subscribe(
-      ((res) => {
-        this.people = res;
-        console.log(this.people);
-        this.peoples = this.peopleProvider.getPeoplesById(this.people.species);
-        this.films = this.filmProvider.getFilmsById(this.people.films);
-        this.starships = this.starshipsProvider.getStarshipsById(this.people.starships);
-        this.vehicles = this.vehiclesProvider.getVehiclesById(this.people.vehicles);
 
-      }),
-      ((error) => {
-        console.log(error);
-      }),
-      () => {
-        console.log('FIN');
-      }
-    );
+    if (this.navParams.get("itemType") == 'people' ){
+      this.peopleProvider.getPeopleById(this.peopleId).subscribe(
+        ((res) => {
+  
+          this.people = res;
+          console.log(this.people);
+          this.peoples = this.peopleProvider.getPeoplesById(this.people.species);
+          this.films = this.filmProvider.getFilmsById(this.people.films);
+          this.starships = this.starshipsProvider.getStarshipsById(this.people.starships);
+          this.vehicles = this.vehiclesProvider.getVehiclesById(this.people.vehicles);
+  
+        }),
+        ((error) => {
+          console.log(error);
+        }),
+        () => {
+          console.log('FIN');
+        }
+      );
+    }
+
   }
 }
 
