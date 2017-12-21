@@ -32,7 +32,7 @@ export class MyApp {
       { title: 'Society', component: SocietyPage },
       { title: 'Movie', component: MoviePage },
       { title: 'Cinéma', component: CineProche },
-      { title: 'Details', component: MoviedetailsPage }
+      { title: 'Details', component: ItemDetailsPage }
     ];
 
   }
