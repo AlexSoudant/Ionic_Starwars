@@ -10,6 +10,7 @@ import { Starship } from '../../interfaces/starship.interface';
 import { StarshipsProvider } from '../../providers/starships/starships';
 import { Vehicle } from '../../interfaces/vehicle.interface';
 import { VehiclesProvider } from '../../providers/vehicles/vehicles';
+import { ItemDetailsPage } from '../item-details/item-details';
 
 import { Observable } from 'rxjs/Observable';
 
@@ -74,5 +75,9 @@ export class MoviedetailsPage {
 
   }
 
-
+  goToItemDetailsPage(id: string) {
+    this.navCtrl.push(ItemDetailsPage, {
+      peopleId: id
+    });
+  }
 }

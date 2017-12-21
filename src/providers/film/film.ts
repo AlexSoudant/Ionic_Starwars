@@ -12,14 +12,14 @@ export class FilmProvider {
 
   constructor(private Swapi: SwapiProvider) { }
 
-  getFilmById(id: string): Observable<Film> {
-    if (this.filmsMap[id]) {
+  getFilmById(id: String): Observable<Film> {
+    if (this.filmsMap[id.toString()]) {
       return new Observable(observer => {
-        observer.next(this.filmsMap[id]);
+        observer.next(this.filmsMap[id.toString()]);
         observer.complete();
       })
     } else {
-      let resObs = this.Swapi.getFilmById(id);
+      let resObs = this.Swapi.getFilmById(id.toString());
       // resObs.subscribe(
       //   ((res) => {
       //     this.filmsMap[id] = res;
@@ -32,7 +32,7 @@ export class FilmProvider {
       //   }
       // );
       return resObs.map(film => {
-        this.filmsMap[id] = film;
+        this.filmsMap[id.toString()] = film;
         return film;
       });
 
@@ -40,7 +40,7 @@ export class FilmProvider {
     }
   }
 
-  getFilmsById(ids: Array<string>): Observable<Array<Film>> {
+  getFilmsById(ids: Array<String>): Observable<Array<Film>> {
     const films: Array<Observable<Film>> = ids.map(id => this.getFilmById(id));
     return Observable.forkJoin(films);
   }

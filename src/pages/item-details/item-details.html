@@ -27,81 +27,51 @@
 
 
 <ion-content>
-  
-    <ion-card class="card-moviedetails">
-      <img src="assets/imgs/EPISODE{{film?.episode_id}}.png" />
-      <ion-card-content>
-        <ion-card-header text-uppercase>
-          EPISODE {{film?.episode_id}} :
-          <br/>
-          {{film?.title}}
-        </ion-card-header>
-  
-        <ion-grid>
-          <ion-row>
-            <ion-col>
-              <p>Director :<br/> {{film?.director}}</p>
-            </ion-col>
-            <ion-col>
-              <p>Release Date:<br/> {{film?.release_date}}</p>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-  
-        <p class="opening_crawl">
-          {{film?.opening_crawl}}
-        </p>
-  
-      </ion-card-content>
-  
-      <ion-item-group>
-        <ion-item-divider>characters</ion-item-divider>
-        <ion-item>
-          <ion-avatar item-end>
-            <img src="assets/imgs/Luke_Skywalker.jpg">
-          </ion-avatar>
-          <p class="details_text">Luke Skywalker</p>
-        </ion-item>
-  
-        <ion-item>
-          <ion-avatar item-end>
-            <img src="assets/imgs/Leia_Organa.jpg">
-          </ion-avatar>
-          <p class="details_text">Leia Organa</p>
-        </ion-item>
-      </ion-item-group>
-  
-  
-      <ion-item-group>
-        <ion-item-divider>planets</ion-item-divider>
-        <ion-item>
-          <p class="details_text">Tatooine</p>
-        </ion-item>
-        <ion-item>
-          <p class="details_text">Yavin IV</p>
-        </ion-item>
-      </ion-item-group>
-  
-      <ion-item-group>
-        <ion-item-divider>starships</ion-item-divider>
-        <ion-item>
-          <p class="details_text">CR90 corvette</p>
-        </ion-item>
-        <ion-item>
-          <p class="details_text">Star Destroyer</p>
-        </ion-item>
-      </ion-item-group>
-  
-      <ion-item-group>
-        <ion-item-divider>vehicles</ion-item-divider>
-        <ion-item>
-          <p class="details_text">Sand Crawler</p>
-        </ion-item>
-        <ion-item>
-          <p class="details_text">T-16 skyhopper</p>
-        </ion-item>
-      </ion-item-group>
-  
-    </ion-card>
-  
-  </ion-content>
+
+  <ion-card class="card-moviedetails">
+    <img src="assets/imgs/personnages/{{people?.name.replace(' ','_').replace(' ','_')}}.jpg" />
+    <ion-card-content>
+      <ion-card-header text-uppercase>
+        Name {{film?.episode_id}} :
+        <br/> {{film?.title}}
+      </ion-card-header>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <p>Gender :
+              <br/> {{people?.gender}}</p>
+          </ion-col>
+          <ion-col>
+            <p>Birth year:
+              <br/> {{people?.birth_year}}</p>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+
+
+    </ion-card-content>
+
+    <ion-item-group>
+      <ion-item-divider>Films</ion-item-divider>
+      <ion-slides *ngIf="films" effect="" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
+        <ion-slide *ngFor="let film of films | async">
+          <ion-card>
+            <img src="assets/imgs/EPISODE{{film.episode_id}}_full.jpg" />
+          </ion-card>
+
+        </ion-slide>
+      </ion-slides>
+    </ion-item-group>
+
+
+
+
+
+
+
+
+  </ion-card>
+
+</ion-content>
