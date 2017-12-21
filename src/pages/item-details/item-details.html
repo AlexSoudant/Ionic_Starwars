@@ -60,7 +60,7 @@
       <ion-slides *ngIf="films" effect="" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
         <ion-slide *ngFor="let film of films | async">
           <ion-card>
-            <img src="assets/imgs/EPISODE{{film.episode_id}}_full.jpg" />
+            <img src="assets/imgs/EPISODE{{film.episode_id}}_full.jpg" (click)="goToDetailsPage(film.url)"/>
           </ion-card>
 
         </ion-slide>
