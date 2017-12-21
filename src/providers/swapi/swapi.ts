@@ -10,7 +10,7 @@ export class SwapiProvider {
 
   private URLAPI: String = 'https://www.swapi.co/api/';
 
-  private KEYS_OF_URLID: Array<String> = ['films', 'characters', 'planets', 'species', 'starships', 'vehicles', 'homeworld', 'url'];
+  private KEYS_OF_URLID: Array<String> = ['films', 'characters', 'planets', 'species', 'starships', 'vehicles', 'homeworld', 'url', 'residents', 'pilots', 'climate', 'diameter'];
 
   private NB_ITEM_BY_PAGE: Number = 10;
 

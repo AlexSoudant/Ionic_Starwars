@@ -89,7 +89,7 @@
       <ion-slides *ngIf="planets" effect="" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
         <ion-slide *ngFor="let planet of planets | async">
           <ion-card>
-            <img src="assets/imgs/planetes/{{planet.img}}" (click)="goToDetailsPage('4')" />
+            <img src="assets/imgs/planetes/{{planet.img}}" (click)="goToItemDetailsPage(planet.id, 'planet')" />
           </ion-card>
           <h1 class="people_name">{{planet.name}}</h1>
         </ion-slide>
@@ -101,7 +101,7 @@
       <ion-slides *ngIf="starships" effect="" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
         <ion-slide *ngFor="let starship of starships | async">
           <ion-card>
-            <img src="assets/imgs/starship/{{starship.img}}" (click)="goToDetailsPage('4')" />
+            <img src="assets/imgs/starship/{{starship.img}}" (click)="goToItemDetailsPage(starship.id, 'starship')" />
           </ion-card>
           <h1 class="details_text">{{starship.name}}</h1>
         </ion-slide>
@@ -113,7 +113,7 @@
       <ion-slides *ngIf="vehicles" effect="" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
         <ion-slide *ngFor="let vehicle of vehicles | async">
           <ion-card>
-            <img src="assets/imgs/vehicules/{{vehicle.img}}" (click)="goToDetailsPage('4')" />
+            <img src="assets/imgs/vehicules/{{vehicle.img}}" (click)="goToItemDetailsPage(vehicle.id, 'vehicle')" />
           </ion-card>
           <h1 class="details_text">{{vehicle.name}}</h1>
         </ion-slide>
