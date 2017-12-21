@@ -15,6 +15,12 @@ page-moviedetails {
     text-align: center;
     border: thin solid #ebd800;
     background-size: cover;
+
+  }
+  .slide-zoom {
+    text-align: center;
+    display: block;
+    width: 110px;
   }
 
   ion-card-title{
@@ -23,9 +29,9 @@ page-moviedetails {
 
   .swiper-slide img {
     width: 85px;
-    max-width: 100%;
+    max-width: 85px;
     height: 100px;
-    max-height: 100%;
+    max-height: 100px;
   }
 
   .details_text{
