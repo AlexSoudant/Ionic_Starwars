@@ -8,6 +8,8 @@ import { Words } from '../../interfaces/words.interface';
 // import { App, ViewController } from 'ionic-angular';
 import { SocietyPage } from '../society/society'
 // import { Subscription } from 'rxjs/Subscription';
+// import { NearbysearchProvider } from '../../providers/nearbysearch/nearbysearch';
+// import { LatLng } from '@ionic-native/google-maps';
 
 @Component({
   selector: 'page-home',
@@ -20,6 +22,9 @@ export class HomePage {
   private societyPage: any;
 
   constructor(public factsProvider: FactsProvider, wordsProvider: WordsProvider, public navCtrl: NavController) {
+    // this.nearby.nearbysearch({ lat: 48.859294, lng: 2.347589 }, 'cinema').subscribe(x => {
+    //   console.log(x)
+    // });
     this.randomFact = factsProvider.getRandom();
     wordsProvider.getAll().subscribe(
       word => {

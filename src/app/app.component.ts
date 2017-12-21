@@ -7,11 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { ActualityPage } from '../pages/actuality/actuality';
 import { SocietyPage } from '../pages/society/society';
 import { MoviePage } from '../pages/movie/movie';
-<<<<<<< HEAD
 //import { MoviedetailsPage } from '../pages/moviedetails/moviedetails';
-=======
-// import { MoviedetailsPage } from '../pages/moviedetails/moviedetails';
->>>>>>> 0a0b207b24497afe5bf8db84d14983abab12fbdc
 import { CineProche } from '../pages/cineproche/cineproche';
 import { ItemDetailsPage } from '../pages/item-details/item-details';
 
