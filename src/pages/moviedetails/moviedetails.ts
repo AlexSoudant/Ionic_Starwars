@@ -13,6 +13,7 @@ import { VehiclesProvider } from '../../providers/vehicles/vehicles';
 import { ItemDetailsPage } from '../item-details/item-details';
 
 import { Observable } from 'rxjs/Observable';
+import { SocietyPage } from '../society/society'
 
 /**
  * Generated class for the MoviedetailsPage page.
@@ -34,6 +35,7 @@ export class MoviedetailsPage {
   public planets: Observable<Planet[]>;
   public starships: Observable<Starship[]>;
   public vehicles: Observable<Vehicle[]>;
+  private societyPage: any;
 
 
   constructor(public navCtrl: NavController,
@@ -45,6 +47,7 @@ export class MoviedetailsPage {
     public vehiclesProvider: VehiclesProvider
   ) {
     this.filmId = navParams.get("filmId");
+    this.societyPage = SocietyPage;
   }
 
   goBackToPreviousPage() {

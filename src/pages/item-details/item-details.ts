@@ -10,6 +10,7 @@ import { Starship } from '../../interfaces/starship.interface';
 import { StarshipsProvider } from '../../providers/starships/starships';
 import { Vehicle } from '../../interfaces/vehicle.interface';
 import { VehiclesProvider } from '../../providers/vehicles/vehicles';
+import { SocietyPage } from '../society/society'
 
 import { Observable } from 'rxjs/Observable';
 import { MoviedetailsPage } from '../moviedetails/moviedetails';
@@ -46,6 +47,8 @@ export class ItemDetailsPage {
   private itemToDisplay: Object = {};
   private type
 
+  private societyPage: any;
+
 
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
@@ -53,7 +56,7 @@ export class ItemDetailsPage {
     public peopleProvider: PeopleProvider,
     public planetProvider: PlanetProvider,
     public starshipsProvider: StarshipsProvider,
-    public vehiclesProvider: VehiclesProvider
+    public vehiclesProvider: VehiclesProvider,
   ) {
 
     console.log('item to display', this.itemToDisplay)
@@ -66,6 +69,8 @@ export class ItemDetailsPage {
       this.starshipId = navParams.get("itemId");
     else if (navParams.get("itemType") == 'vehicle')
       this.vehicleId = navParams.get("itemId");
+
+      this.societyPage = SocietyPage;
 
   }
 
