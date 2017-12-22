@@ -31,7 +31,6 @@ export class MyApp {
       { title: 'Actuality', component: ActualityPage },
       { title: 'Society', component: SocietyPage },
       { title: 'Movie', component: MoviePage },
-      { title: 'Cinéma', component: CineProche },
     ];
 
   }
