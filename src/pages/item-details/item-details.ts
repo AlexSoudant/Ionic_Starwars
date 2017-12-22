@@ -179,7 +179,7 @@ export class ItemDetailsPage {
           this.itemToDisplay['prop1'] = this.starship.length;
           this.itemToDisplay['prop1_name'] = 'Size';
           this.itemToDisplay['prop2'] = this.starship.passengers;
-          this.itemToDisplay['prop2_name'] = 'Nb passengers';
+          this.itemToDisplay['prop2_name'] = 'Passengers';
 
           this.addImg(this.itemToDisplay)
           //this.itemToDisplay['srcImg'] = "assets/imgs/starships/{{starship.img}}";
@@ -209,7 +209,7 @@ export class ItemDetailsPage {
           this.itemToDisplay['prop1_name'] = 'Size';
 
           this.itemToDisplay['prop2'] = this.vehicle.passengers;
-          this.itemToDisplay['prop2_name'] = 'Nb passengers';
+          this.itemToDisplay['prop2_name'] = 'passengers';
 
           this.addImg(this.itemToDisplay)
           //this.itemToDisplay['srcImg'] = "assets/imgs/vehicles/" + this.vehicle.img";
