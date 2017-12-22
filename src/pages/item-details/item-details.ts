@@ -81,6 +81,13 @@ export class ItemDetailsPage {
     });
   }
 
+  goToItemDetailsPage(id: string, type: string) {
+    this.navCtrl.push(ItemDetailsPage, {
+      itemId: id,
+      itemType: type
+    });
+  }
+
   addImg(element: any): any {
     element['img'] = element['name'].replace(/ /g, '_') + ".jpg"
     return element

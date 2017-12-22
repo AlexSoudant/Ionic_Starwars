@@ -75,7 +75,7 @@
       <ion-slides *ngIf="peoples" effect="" spaceBetween="0" slidesPerView="3.2" centeredSlides="true" pager="false">
         <ion-slide *ngFor="let people of peoples | async">
           <ion-card>
-            <img src="assets/imgs/personnages/{{people.img}}" />
+            <img src="assets/imgs/personnages/{{people.img}}" (click)="goToItemDetailsPage(people.id, 'people')" />
           </ion-card>
 
         </ion-slide>
